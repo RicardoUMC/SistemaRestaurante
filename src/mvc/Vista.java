@@ -76,7 +76,7 @@ public class Vista {
         ventanaMenuPrincipal.add(panelNorte, BorderLayout.NORTH);
         ventanaMenuPrincipal.add(panelCentro, BorderLayout.CENTER);
 
-        ventanaMenuPrincipal.setSize(1000, 500);
+        ventanaMenuPrincipal.setSize(650, 500);
 		ventanaMenuPrincipal.setLocation(100, 100);
 		ventanaMenuPrincipal.setVisible(true);
     }
