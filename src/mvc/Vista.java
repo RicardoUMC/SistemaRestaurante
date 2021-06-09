@@ -15,8 +15,6 @@ public class Vista {
     //Defino las ventanas y elementos globales
     JFrame ventanaMenuPrincipal = new JFrame();
 
-
-
     //Método para mostrar el Menú Principal
     public void menuPrincipal(){
         JPanel panelNorte = new JPanel();
@@ -25,7 +23,7 @@ public class Vista {
         panelCentro.setLayout(new GridBagLayout());
 
         JLabel tituloApp = new JLabel("<html><span style='color: teal;'>Sistema gestor de Restaurante</span></html>");
-        tituloApp.setFont(tituloApp.getFont().deriveFont(64.0f));
+        tituloApp.setFont(tituloApp.getFont().deriveFont(40.0f));
 
         JButton boton1, boton2, boton3, boton4, boton5, boton6;
         boton1 = new JButton("Mostrar Menú");
@@ -82,8 +80,5 @@ public class Vista {
 		ventanaMenuPrincipal.setLocation(100, 100);
 		ventanaMenuPrincipal.setVisible(true);
     }
-
-
-
 }
 
