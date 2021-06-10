@@ -17,7 +17,6 @@ public class SistemaRestaurante {
         vista.menuPrincipal();
 		
 		
-		//prueba 1 no borrar
     }
     
 }
