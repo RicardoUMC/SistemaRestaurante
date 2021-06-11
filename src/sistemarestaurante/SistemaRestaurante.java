@@ -17,8 +17,6 @@ public class SistemaRestaurante {
         vista.menuPrincipal();
 		
 
-
-        //Prueba 676
 		
     }
     
