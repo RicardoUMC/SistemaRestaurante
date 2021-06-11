@@ -1,5 +1,5 @@
 package mvc.clases;
 
-public class Repartidor extends Persona{
-    
+public class Repartidor extends Persona {
+
 }
