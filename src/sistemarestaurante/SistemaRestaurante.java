@@ -15,9 +15,9 @@ public class SistemaRestaurante {
         Vista vista = new Vista();
 
         vista.menuPrincipal();
-		
 
-		
+        // prueba demostracion para Aldrich
+
     }
-    
+
 }
