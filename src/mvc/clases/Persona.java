@@ -5,7 +5,7 @@ public abstract class Persona {
     private String nombre;
     private String apellidos;
     private int edad;
-    private String genero;
+    private String generoAldo;
 
     void set_nombre() {
 
