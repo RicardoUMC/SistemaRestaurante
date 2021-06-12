@@ -16,8 +16,6 @@ public class SistemaRestaurante {
 
         vista.menuPrincipal();
 
-        // prueba demostracion para Aldrich
-
     }
 
 }
