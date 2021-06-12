@@ -17,5 +17,5 @@ public class SistemaRestaurante {
         vista.menuPrincipal();
 
     }
-    ////Aldo esta bie bueno xdxd
+    ////Aldo esta bie bueno
 }
