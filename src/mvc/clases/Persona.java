@@ -7,36 +7,20 @@ public abstract class Persona {
     protected int edad;
     protected String genero;
 
-    void set_nombre() {
+    public void set_nombre();
 
-    }
+    public String get_nombre();
 
-    void get_nombre() {
+    public void set_apellido();
 
-    }
+    public String get_apellido();
 
-    void set_apellido() {
+    public void set_edad();
 
-    }
+    public int get_edad();
 
-    void get_apellido() {
+    public void set_genero();
 
-    }
-
-    void set_edad() {
-
-    }
-
-    void get_edad() {
-
-    }
-
-    void set_genero() {
-
-    }
-
-    void get_genero() {
-
-    }
+    public String get_genero();
 
 }
