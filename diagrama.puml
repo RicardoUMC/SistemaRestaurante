@@ -50,11 +50,11 @@ Persona <|-r- Cliente
 Persona <|-l- Repartidor
 
 Restaurante *-- Pedido
-Restaurante *-r- IReceta
+Restaurante -right.|> IReceta
 
-IReceta <|-- Comida
-IReceta <|-- Bebida
-IReceta <|-- Postre
+IReceta <|-. Comida
+IReceta <|-. Bebida
+IReceta <|-. Postre
 
 Pedido o-- Cliente
 Pedido *-- Repartidor
