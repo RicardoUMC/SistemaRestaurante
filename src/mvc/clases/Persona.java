@@ -2,10 +2,10 @@ package mvc.clases;
 
 public abstract class Persona {
 
-    private String nombre;
-    private String apellidos;
-    private int edad;
-    private String genero;
+    protected String nombre;
+    protected String apellidos;
+    protected int edad;
+    protected String genero;
 
     void set_nombre() {
 
