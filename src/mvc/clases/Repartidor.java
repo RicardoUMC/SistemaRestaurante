@@ -2,11 +2,12 @@ package mvc.clases;
 
 public class Repartidor extends Persona {
 
+    protected Persona per;
     protected int repartidor_No;    
     protected boolean disponibilidad;
 
-    Repartidor(){
-
+    Repartidor(Persona per,int repartidor_No, boolean disponibilidad){
+        super(per.nombre,per.apellidos,per.edad,per.genero);
 
     }
     @Override
