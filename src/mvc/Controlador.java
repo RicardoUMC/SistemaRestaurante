@@ -45,7 +45,7 @@ public class Controlador{
                 }
 
                 //Pedimos datos al usuario
-                String nombre = JOptionPane.showInputDialog("Nombre del repartido: ");
+                String nombre = JOptionPane.showInputDialog("Nombre del repartidor: ");
                 String apellido = JOptionPane.showInputDialog("Apellido del repartidor: ");
                 int edad = Integer.parseInt(JOptionPane.showInputDialog("Edad del repartidor: "));
                 char genero = JOptionPane.showInputDialog("Genero del repartidor (M o F): ").charAt(0);
