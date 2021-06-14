@@ -48,13 +48,15 @@ public class Controlador{
                 //Pedimos datos al usuario
                 String nombreRestaurante = JOptionPane.showInputDialog("Nombre del restaurante: ");
                 String ubicacioneRestaurante = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");
+                String telefonoRestaurante = JOptionPane.showInputDialog("Telefono del restaurante: ");
 
                 //Registramos los datos del restaurante
-                modelo.registrarDatosRestaurante(nombreRestaurante, ubicacioneRestaurante);
+                modelo.registrarDatosRestaurante(nombreRestaurante, ubicacioneRestaurante, telefonoRestaurante);
 
                 //Asignamos dichos datos a los labels del menu
                 vista.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
                 vista.ubicacionRestaurante.setText(modelo.miRestaurante.getUbicacion());
+                vista.telefonoRestaurante.setText(modelo.miRestaurante.getTelefono());
             }
 
             if(vista.btnSalir == e.getSource()) {
