@@ -66,11 +66,12 @@ public class Controlador{
 
             if(vista.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
-                String nombreRestaurante = JOptionPane.showInputDialog("Nombre del restaurante: ");
-                String ubicacioneRestaurante = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");
+                String nombre = JOptionPane.showInputDialog("Nombre del restaurante: ");
+                String ubicacion = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");     
+                String telefono = JOptionPane.showInputDialog("Teléfono del restaurante: ");
 
                 //Registramos los datos del restaurante
-                modelo.registrarDatosRestaurante(nombreRestaurante, ubicacioneRestaurante);
+                modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
 
                 //Asignamos dichos datos a los labels del menu
                 vista.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
