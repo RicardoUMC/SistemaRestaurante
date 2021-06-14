@@ -2,13 +2,12 @@ package mvc.clases;
 
 public class Cliente extends Persona {
 
-    protected Persona per;
     protected String direccion;
     protected int numero_telefono;
 
     Cliente() {}
 
-    Cliente(Persona per,String nombre, String apellidos, int edad, String genero) {
+    Cliente(String nombre, String apellidos, int edad, String genero) {
         super(nombre, apellidos, edad, genero);
        
     }

@@ -76,6 +76,7 @@ public class Controlador{
                 //Asignamos dichos datos a los labels del menu
                 vista.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
                 vista.ubicacionRestaurante.setText(modelo.miRestaurante.getUbicacion());
+                vista.telefonoRestaurante.setText(modelo.miRestaurante.getTelefono());
             }
 
             if(vista.btnSalir == e.getSource()) {

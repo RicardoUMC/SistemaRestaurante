@@ -41,6 +41,10 @@ public class Restaurante implements IReceta {
         this.telefono = telefono;
     }
 
+    public String getTelefono() {
+        return this.telefono;
+    }
+
     public void agregarRepartidor (Repartidor r){
         repartidores.add(r);
     }

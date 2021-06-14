@@ -19,6 +19,7 @@ public class Vista  extends JFrame{
     
     public JLabel nombreRestaurante = new JLabel();
     public JLabel ubicacionRestaurante = new JLabel();
+    public JLabel telefonoRestaurante = new JLabel();
 
     //Método para mostrar el Menú Principal
     public void menuPrincipal(){
@@ -60,6 +61,10 @@ public class Vista  extends JFrame{
         c.gridx = 0;
         c.gridy = 3;  
         panelNorte.add(ubicacionRestaurante, c);
+
+        c.gridx = 0;
+        c.gridy = 4;
+        panelNorte.add(telefonoRestaurante, c);
 
 
         //Añadimos botones al Panel Centro
