@@ -2,10 +2,11 @@ package mvc.clases;
 
 public class Repartidor extends Persona {
 
-
     protected String medioTransporte;    
     protected float calificacion;
     protected char genero;
+
+    public Repartidor() {}
 
     public Repartidor(String nombre, String apellido, int edad, char genero, String medioTransporte, int tiempoLlegada, float calificacion){
         super(nombre, apellido, edad, genero);
@@ -55,7 +56,5 @@ public class Repartidor extends Persona {
     public char get_genero() {
         return genero;
     }
-
-
 
 }

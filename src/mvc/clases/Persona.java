@@ -7,6 +7,8 @@ public abstract class Persona {
     protected int edad;
     protected char genero;
 
+    public Persona() {}
+
     public Persona(String nombre, String apellidos, int edad, char genero){
 
     }
