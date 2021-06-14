@@ -8,6 +8,10 @@ public class Restaurante implements IReceta {
     private String telefono;
     protected ArrayList <Pedido> pedido;
 
+    public Restaurante() {
+        this.pedido = new ArrayList<Pedido>();
+    }
+    
     public Restaurante(String nombre, String ubicacion, String telefono) {
         this.pedido = new ArrayList<Pedido>();
         this.nombre = nombre;
@@ -39,9 +43,4 @@ public class Restaurante implements IReceta {
         return telefono;
     }
 
-    
-
-    public Restaurante() {
-        this.pedido = new ArrayList<Pedido>();
-    }
 }
