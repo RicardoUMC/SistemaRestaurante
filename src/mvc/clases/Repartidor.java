@@ -2,15 +2,14 @@ package mvc.clases;
 
 public class Repartidor extends Persona {
 
-    protected Persona per;
     protected int repartidor_No;    
     protected boolean disponibilidad;
 
     public Repartidor() {}
 
-    public Repartidor(Persona per,int repartidor_No, boolean disponibilidad){
-        super(per.nombre,per.apellidos,per.edad,per.genero);
-
+    public Repartidor(int repartidor_No, boolean disponibilidad){
+        this.repartidor_No = repartidor_No;
+        this.disponibilidad = disponibilidad;
     }
     @Override
     public void set_nombre(String nombre){
