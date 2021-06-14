@@ -1,14 +1,15 @@
 package mvc.clases;
 
+import java.util.ArrayList;
+
 public class Restaurante implements IReceta {
     private String nombre;
     private String ubicacion;
     private int maxPersonas;
-
-    protected Pedido pedido;
+    protected ArrayList <Pedido> pedido;
 
     public Restaurante(String nombre, String ubicacion, int maxPersonas) {
-        this.pedido = new Pedido();
+        this.pedido = new ArrayList<Pedido>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.maxPersonas = maxPersonas;
@@ -36,5 +37,11 @@ public class Restaurante implements IReceta {
 
     public int getMaxPersonas() {
         return maxPersonas;
+    }
+
+    
+
+    public Restaurante() {
+        this.pedido = new ArrayList<Pedido>();
     }
 }
