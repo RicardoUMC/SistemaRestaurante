@@ -58,6 +58,7 @@ public class Controlador{
 
                 //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                 modelo.guardarRepartidor(repartidor);
+                JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
             }
 
             if(vista.btnRegPlatilo == e.getSource()) {

@@ -8,12 +8,12 @@ public class Repartidor extends Persona {
 
     public Repartidor() {}
 
-    public Repartidor(String nombre, String apellidos, int edad, char genero, String medioTransporte, int tiempoLlegada, float calificacion){
+    public Repartidor(String nombre, String apellido, int edad, char genero, String medioTransporte, int tiempoLlegada, float calificacion){
         //super(nombre, apellido, edad, genero);
 
         //Se pone "this.atributo" porque no se pueden pasar los datos a Persona (Clase Abstracta)
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
         this.edad = edad;
         this.genero = genero;
         this.medioTransporte = medioTransporte;
@@ -33,13 +33,13 @@ public class Repartidor extends Persona {
     @Override
     public void set_apellido(String apellido) {
         
-        this.apellidos = apellido;
+        this.apellido = apellido;
         
     }
     @Override
     public String get_apellido() {
         
-        return apellidos;
+        return apellido;
     }
     @Override
     public void set_edad(int edad) {

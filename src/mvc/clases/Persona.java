@@ -3,13 +3,13 @@ package mvc.clases;
 public abstract class Persona {
     
     protected String nombre;
-    protected String apellidos;
+    protected String apellido;
     protected int edad;
     protected char genero;
 
     public Persona() {}
 
-    public Persona(String nombre, String apellidos, int edad, char genero){
+    public Persona(String nombre, String apellido, int edad, char genero){
 
     }
 
