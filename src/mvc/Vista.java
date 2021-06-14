@@ -2,6 +2,7 @@ package mvc;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.FlowLayout;
@@ -10,10 +11,11 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Dimension;
 
-public class Vista {
+public class Vista  extends JFrame{
 
     //Defino las ventanas y elementos globales
-    JFrame ventanaMenuPrincipal = new JFrame();
+    // public JFrame ventanaMenuPrincipal = new JFrame();
+    public JButton btnMostrarMenu, btnPedido, btnRegRepartidor, btnRegPlatilo, btnRegRestaurante, btnSalir;
 
     //Método para mostrar el Menú Principal
     public void menuPrincipal(){
@@ -24,20 +26,19 @@ public class Vista {
 
         JLabel tituloApp = new JLabel("<html><span style='color: teal;'>Sistema gestor de Restaurante</span></html>");
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
-
-        JButton boton1, boton2, boton3, boton4, boton5, boton6;
-        boton1 = new JButton("Mostrar Menú");
-        boton1.setPreferredSize(new Dimension(150, 50));
-        boton2 = new JButton("Realizar pedido");
-        boton2.setPreferredSize(new Dimension(150, 50));
-        boton3 = new JButton("Registrar repartidores");
-        boton3.setPreferredSize(new Dimension(150, 50));
-        boton4 = new JButton("Registrar platillo");
-        boton4.setPreferredSize(new Dimension(150, 50));
-        boton5 = new JButton("Registrar datos de restaurante");
-        boton5.setPreferredSize(new Dimension(150, 50));
-        boton6 = new JButton("Salir");
-        boton6.setPreferredSize(new Dimension(150, 50));
+        
+        btnMostrarMenu = new JButton("Mostrar Menú");
+        btnMostrarMenu.setPreferredSize(new Dimension(150, 50));
+        btnPedido = new JButton("Realizar pedido");
+        btnPedido.setPreferredSize(new Dimension(150, 50));
+        btnRegRepartidor = new JButton("Registrar repartidores");
+        btnRegRepartidor.setPreferredSize(new Dimension(150, 50));
+        btnRegPlatilo = new JButton("Registrar platillo");
+        btnRegPlatilo.setPreferredSize(new Dimension(150, 50));
+        btnRegRestaurante = new JButton("Registrar datos de restaurante");
+        btnRegRestaurante.setPreferredSize(new Dimension(150, 50));
+        btnSalir = new JButton("Salir");
+        btnSalir.setPreferredSize(new Dimension(150, 50));
         
         //Añadimos título al Panel Norte
         panelNorte.add(tituloApp);
@@ -50,35 +51,36 @@ public class Vista {
 
         c.gridx = 0;
         c.gridy = 0;  
-        panelCentro.add(boton1, c);
+        panelCentro.add(btnMostrarMenu, c);
 
         c.gridx = 1;
         c.gridy = 0;  
-        panelCentro.add(boton2, c);
+        panelCentro.add(btnPedido, c);
 
         c.gridx = 0;
         c.gridy = 2;  
-        panelCentro.add(boton3, c);
+        panelCentro.add(btnRegRepartidor, c);
 
         c.gridx = 1;
         c.gridy = 2;  
-        panelCentro.add(boton4, c);
+        panelCentro.add(btnRegPlatilo, c);
 
         c.gridx = 0;
         c.gridy = 3;  
-        panelCentro.add(boton5, c);
+        panelCentro.add(btnRegRestaurante, c);
 
         c.gridx = 1;
         c.gridy = 3;  
-        panelCentro.add(boton6, c);
+        panelCentro.add(btnSalir, c);
 
         //Añadimos paneles a la ventana
-        ventanaMenuPrincipal.add(panelNorte, BorderLayout.NORTH);
-        ventanaMenuPrincipal.add(panelCentro, BorderLayout.CENTER);
+        add(panelNorte, BorderLayout.NORTH);
+        add(panelCentro, BorderLayout.CENTER);
 
-        ventanaMenuPrincipal.setSize(400, 300);
-		ventanaMenuPrincipal.setLocation(800, 300);
-		ventanaMenuPrincipal.setVisible(true);
+        setSize(400, 300);
+		setLocation(800, 300);
+		setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
 

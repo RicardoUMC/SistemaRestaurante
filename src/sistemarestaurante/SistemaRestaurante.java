@@ -1,21 +1,17 @@
 package sistemarestaurante;
 
-import mvc.Vista;
+import mvc.*;
 
-/**
- *
- * @authors
- */
 public class SistemaRestaurante {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Modelo modelo = new Modelo();
         Vista vista = new Vista();
-
-        vista.menuPrincipal();
-
+        Controlador controlador = new Controlador(modelo, vista);
+        controlador.iniciarVista();
     }
 
 }
