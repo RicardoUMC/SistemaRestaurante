@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Restaurante implements IReceta {
     private String nombre;
     private String ubicacion;
-    private int maxPersonas;
+    private String telefono;
     protected ArrayList <Pedido> pedido;
 
-    public Restaurante(String nombre, String ubicacion, int maxPersonas) {
+    public Restaurante(String nombre, String ubicacion, String telefono) {
         this.pedido = new ArrayList<Pedido>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.maxPersonas = maxPersonas;
+        this.telefono = telefono;
     }
 
     public void setNombre(String nombre) {
@@ -31,12 +31,12 @@ public class Restaurante implements IReceta {
         return ubicacion;
     }
 
-    public void setMaxPersonas(int maxPersonas) {
-        this.maxPersonas = maxPersonas;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public int getMaxPersonas() {
-        return maxPersonas;
+    public String getTelefono() {
+        return telefono;
     }
 
     
