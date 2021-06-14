@@ -2,6 +2,8 @@ package mvc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 public class Controlador{
     
     Modelo modelo;
@@ -43,7 +45,16 @@ public class Controlador{
             }
 
             if(vista.btnRegRestaurante == e.getSource()) {
-                //registrarDatosRestaurante
+                //Pedimos datos al usuario
+                String nombreRestaurante = JOptionPane.showInputDialog("Nombre del restaurante: ");
+                String ubicacioneRestaurante = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");
+
+                //Registramos los datos del restaurante
+                modelo.registrarDatosRestaurante(nombreRestaurante, ubicacioneRestaurante);
+
+                //Asignamos dichos datos a los labels del menu
+                vista.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
+                vista.ubicacionRestaurante.setText(modelo.miRestaurante.getUbicacion());
             }
 
             if(vista.btnSalir == e.getSource()) {

@@ -16,12 +16,15 @@ public class Vista  extends JFrame{
     //Defino las ventanas y elementos globales
     // public JFrame ventanaMenuPrincipal = new JFrame();
     public JButton btnMostrarMenu, btnPedido, btnRegRepartidor, btnRegPlatilo, btnRegRestaurante, btnSalir;
+    
+    public JLabel nombreRestaurante = new JLabel();
+    public JLabel ubicacionRestaurante = new JLabel();
 
     //Método para mostrar el Menú Principal
     public void menuPrincipal(){
         JPanel panelNorte = new JPanel();
         JPanel panelCentro = new JPanel();
-        panelNorte.setLayout(new FlowLayout());
+        panelNorte.setLayout(new GridBagLayout());
         panelCentro.setLayout(new GridBagLayout());
 
         JLabel tituloApp = new JLabel("<html><span style='color: teal;'>Sistema gestor de Restaurante</span></html>");
@@ -40,15 +43,26 @@ public class Vista  extends JFrame{
         btnSalir = new JButton("Salir");
         btnSalir.setPreferredSize(new Dimension(150, 50));
         
-        //Añadimos título al Panel Norte
-        panelNorte.add(tituloApp);
-
-        //Añadimos botones al Panel Centro
+        //Añadimos elementos al Panel Norte
         GridBagConstraints c = new GridBagConstraints();
         c.gridwidth = 1;
         c.weightx = 1;
         c.weighty = 1;
 
+        c.gridx = 0;
+        c.gridy = 0;  
+        panelNorte.add(tituloApp, c);
+
+        c.gridx = 0;
+        c.gridy = 2;   
+        panelNorte.add(nombreRestaurante, c);
+
+        c.gridx = 0;
+        c.gridy = 3;  
+        panelNorte.add(ubicacionRestaurante, c);
+
+
+        //Añadimos botones al Panel Centro
         c.gridx = 0;
         c.gridy = 0;  
         panelCentro.add(btnMostrarMenu, c);
