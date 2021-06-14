@@ -1,8 +1,8 @@
 package mvc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JOptionPane;
+import mvc.clases.Repartidor;
 
 public class Controlador{
     
@@ -37,7 +37,27 @@ public class Controlador{
             }
 
             if(vista.btnRegRepartidor == e.getSource()) {
-                //registrarRepartidor
+
+                //Si no se han registrado datos del restaurante, no podemos crear repartidores
+                if(modelo.miRestaurante == null){
+                    JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
+                    return;
+                }
+
+                //Pedimos datos al usuario
+                String nombre = JOptionPane.showInputDialog("Nombre del repartido: ");
+                String apellido = JOptionPane.showInputDialog("Apellido del repartidor: ");
+                int edad = Integer.parseInt(JOptionPane.showInputDialog("Edad del repartidor: "));
+                char genero = JOptionPane.showInputDialog("Genero del repartidor (M o F): ").charAt(0);
+                String medioTransporte = JOptionPane.showInputDialog("Medio de transporte: ");
+                int tiempoLlegada = Integer.parseInt(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "));
+                float calificacion = Float.parseFloat(JOptionPane.showInputDialog("Calificación de 1 - 5 estrellas: "));
+
+                //Registramos los datos del repartidor (instanciamos persona y repartidor)
+                Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero, medioTransporte, tiempoLlegada, calificacion);
+
+                //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
+                modelo.guardarRepartidor(repartidor);
             }
 
             if(vista.btnRegPlatilo == e.getSource()) {

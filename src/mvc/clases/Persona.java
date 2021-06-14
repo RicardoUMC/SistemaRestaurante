@@ -2,13 +2,14 @@ package mvc.clases;
 
 public abstract class Persona {
     
-
     protected String nombre;
     protected String apellidos;
     protected int edad;
-    protected String genero;
+    protected char genero;
 
-    public Persona(String nombre, String apellidos,int edad, String genero){}
+    public Persona(String nombre, String apellidos, int edad, char genero){
+
+    }
 
     public abstract void set_nombre(String nombre);
 
@@ -22,8 +23,8 @@ public abstract class Persona {
 
     public abstract int get_edad();
 
-    public abstract void set_genero(String genero);
+    public abstract void set_genero(char genero);
 
-    public abstract String get_genero();
+    public abstract char get_genero();
 
 }
