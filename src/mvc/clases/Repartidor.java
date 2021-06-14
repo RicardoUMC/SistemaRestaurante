@@ -6,7 +6,9 @@ public class Repartidor extends Persona {
     protected int repartidor_No;    
     protected boolean disponibilidad;
 
-    Repartidor(Persona per,int repartidor_No, boolean disponibilidad){
+    public Repartidor() {}
+
+    public Repartidor(Persona per,int repartidor_No, boolean disponibilidad){
         super(per.nombre,per.apellidos,per.edad,per.genero);
 
     }

@@ -8,6 +8,8 @@ public abstract class Persona {
     protected int edad;
     protected String genero;
 
+    public Persona(){}
+
     public Persona(String nombre, String apellidos,int edad, String genero){}
 
     public abstract void set_nombre(String nombre);
