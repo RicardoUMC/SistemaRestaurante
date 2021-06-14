@@ -7,9 +7,14 @@ public class Cliente extends Persona {
 
     Cliente() {}
 
-    Cliente(String nombre, String apellidos, int edad, String genero) {
-        super(nombre, apellidos, edad, genero);
+    Cliente(String nombre, String apellidos, int edad, char genero) {
+        //super(nombre, apellidos, edad, genero);
        
+        // Se pone "this.atributo" porque no se pueden pasar los datos a Persona (Clase Abstracta)
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.genero = genero;
     }
 
     @Override
@@ -45,12 +50,12 @@ public class Cliente extends Persona {
         return edad;
     }
     @Override
-    public void set_genero(String genero) {
+    public void set_genero(char genero) {
         
         this.genero = genero;
     }
     @Override
-    public String get_genero() {
+    public char get_genero() {
         
         return genero;
     }
