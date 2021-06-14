@@ -15,6 +15,7 @@ public class SistemaRestaurante {
         Vista vista = new Vista();
 
         vista.menuPrincipal();
+
     }
-    
+
 }

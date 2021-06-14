@@ -1,0 +1,62 @@
+@startuml
+
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+note as N1 #OrangeRed
+Ávila Sánchez Aldrich Jonathan
+González Oloarte Diego Enrique
+Mora Campos Ricardo Uriel 
+Velázquez Hernández Aldo
+end note
+
+class Restaurante {
+
+}
+
+class Pedido {
+
+}
+
+interface IReceta {
+
+}
+
+class Comida {
+
+}
+
+class Bebida {
+    
+}
+
+class Postre {
+    
+}
+
+Abstract Persona {
+
+}
+
+class Cliente {
+
+}
+
+class Repartidor {
+
+}
+
+Persona <|-r- Cliente
+Persona <|-l- Repartidor
+
+Restaurante *-- Pedido
+Restaurante -right.|> IReceta
+
+IReceta <|-. Comida
+IReceta <|-. Bebida
+IReceta <|-. Postre
+
+Pedido o-- Cliente
+Pedido *-- Repartidor
+
+@enduml

@@ -23,7 +23,7 @@ public class Vista {
         panelCentro.setLayout(new GridBagLayout());
 
         JLabel tituloApp = new JLabel("<html><span style='color: teal;'>Sistema gestor de Restaurante</span></html>");
-        tituloApp.setFont(tituloApp.getFont().deriveFont(40.0f));
+        tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
 
         JButton boton1, boton2, boton3, boton4, boton5, boton6;
         boton1 = new JButton("Mostrar Menú");
@@ -76,8 +76,8 @@ public class Vista {
         ventanaMenuPrincipal.add(panelNorte, BorderLayout.NORTH);
         ventanaMenuPrincipal.add(panelCentro, BorderLayout.CENTER);
 
-        ventanaMenuPrincipal.setSize(650, 500);
-		ventanaMenuPrincipal.setLocation(100, 100);
+        ventanaMenuPrincipal.setSize(400, 300);
+		ventanaMenuPrincipal.setLocation(800, 300);
 		ventanaMenuPrincipal.setVisible(true);
     }
 }
