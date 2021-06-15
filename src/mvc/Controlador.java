@@ -49,8 +49,12 @@ public class Controlador{
                 String apellido = validString(JOptionPane.showInputDialog("Apellido del repartidor: "), "Apellido del repartidor: ");
                 //TODO: Comprobar que el string pase a entero
                 int edad = Integer.parseInt(validString(JOptionPane.showInputDialog("Edad del repartidor: "), "Edad del repartidor: "));
-                //TODO: Validar que sea M o F
-                char genero = validString(JOptionPane.showInputDialog("Genero del repartidor (M o F): "), "Genero del repartidor (M o F): ").charAt(0);
+                
+                //Se valida solamente F o M
+                String[] options = {"F", "M"};
+                String n = (String) JOptionPane.showInputDialog(null, "Género del repartidor:", null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                char genero = n.charAt(0);
+                
                 String medioTransporte = validString(JOptionPane.showInputDialog("Medio de transporte: "), "Medio de transporte: ");
                 // TODO: Comprobar que el string pase a entero
                 int tiempoLlegada = Integer.parseInt(validString(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "), "Tiempo promedio de llegada (minutos): "));
