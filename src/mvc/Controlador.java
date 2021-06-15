@@ -63,7 +63,6 @@ public class Controlador{
                 char genero = n.charAt(0);
                 String medioTransporte = validString(JOptionPane.showInputDialog(transRep), transRep);
                 int tiempoLlegada = validInt(validString(JOptionPane.showInputDialog(tiemRep), tiemRep), tiemRep);
-                //TODO: Comprobar que el string pase a flotante y esté en el rango solicitado
                 float calificacion = validRango(validFloat(JOptionPane.showInputDialog(calRep), calRep), calRep);
 
                 //Registramos los datos del repartidor (instanciamos persona y repartidor)
