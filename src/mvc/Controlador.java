@@ -44,11 +44,13 @@ public class Controlador{
                     return;
                 }
 
-                //Pedimos datos al usuario
-                String nombre = JOptionPane.showInputDialog("Nombre del repartidor: ");
-                String apellido = JOptionPane.showInputDialog("Apellido del repartidor: ");
-                int edad = Integer.parseInt(JOptionPane.showInputDialog("Edad del repartidor: "));
+                //Pedimos datos del repartidor
+                String nombre = compareString(JOptionPane.showInputDialog("Nombre del repartidor: "), "Nombre del repartidor: ");
+                String apellido = compareString(JOptionPane.showInputDialog("Apellido del repartidor: "), "Apellido del repartidor: ");
+                //TODO: Comprobar que el string pase a entero
+                int edad = Integer.parseInt(compareString(JOptionPane.showInputDialog("Edad del repartidor: "), "Edad del repartidor: "));
                 char genero = JOptionPane.showInputDialog("Genero del repartidor (M o F): ").charAt(0);
+                JOptionPane.showMessageDialog(null, genero);
                 String medioTransporte = JOptionPane.showInputDialog("Medio de transporte: ");
                 int tiempoLlegada = Integer.parseInt(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "));
                 float calificacion = Float.parseFloat(JOptionPane.showInputDialog("Calificación de 1 - 5 estrellas: "));
@@ -100,4 +102,37 @@ public class Controlador{
         }
         return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
+
+    /*private char comparString(char validacion, String mensajeVal) {
+        if (!"".equals(validacion)) {
+            try {
+                return validacion;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
+            }
+        }
+        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
+    }*/
+
+    /*private String compareString(String validacion, String mensajeVal) {
+        if (!"".equals(validacion)) {
+            try {
+                return validacion;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
+            }
+        }
+        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
+    }
+
+    private String compareString(String validacion, String mensajeVal) {
+        if (!"".equals(validacion)) {
+            try {
+                return validacion;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
+            }
+        }
+        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
+    }*/
 }
