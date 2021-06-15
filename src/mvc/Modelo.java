@@ -1,7 +1,6 @@
 package mvc;
 
-import mvc.clases.Repartidor;
-import mvc.clases.Restaurante;
+import mvc.clases.*;
 
 public class Modelo {
     public Restaurante miRestaurante;

@@ -67,9 +67,9 @@ public class Controlador{
 
             else if(vista.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
-                String nombre = JOptionPane.showInputDialog("Nombre del restaurante: ");
-                String ubicacion = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");     
-                String telefono = JOptionPane.showInputDialog("Teléfono del restaurante: ");
+                String nombre = compareString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
+                String ubicacion = compareString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
+                String telefono = compareString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
 
                 //Registramos los datos del restaurante
                 modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
@@ -88,9 +88,16 @@ public class Controlador{
         }
     };
 
-    /*private void compareString(String compare) {
-        if (!"".equals(compare)) {
-            try
+    //Metodo recursivo para validar que la entrada de texto no sea nula
+    //Primer parametro es el texto a validar, el segundo parametro es el mensaje para pedir un dato valido
+    private String compareString(String validacion, String mensajeVal) {
+        if (!"".equals(validacion)) {
+            try{
+                return validacion;
+            } catch (Exception e){
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
+            }
         }
-    }*/
+        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
+    }
 }
