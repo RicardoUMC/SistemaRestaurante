@@ -63,7 +63,7 @@ public class Controlador{
                 String medioTransporte = validString(JOptionPane.showInputDialog(transRep), transRep);
                 int tiempoLlegada = validInt(validString(JOptionPane.showInputDialog(tiemRep), tiemRep), tiemRep);
                 //TODO: Comprobar que el string pase a flotante y esté en el rango solicitado
-                float calificacion = Float.parseFloat(validString(JOptionPane.showInputDialog(calRep), calRep));
+                float calificacion = validRango(validFloat(JOptionPane.showInputDialog(calRep), calRep), calRep);
 
                 //Registramos los datos del repartidor (instanciamos persona y repartidor)
                 Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero, medioTransporte, tiempoLlegada, calificacion);
@@ -76,6 +76,7 @@ public class Controlador{
 
             else if(vista.btnRegPlatilo == e.getSource()) {
                 //regsitrarPlatillo
+                
             }
 
             else if(vista.btnRegRestaurante == e.getSource()) {
@@ -122,4 +123,23 @@ public class Controlador{
         }
     }
 
+    private float validFloat(String validacion, String mensajeVal) { 
+        try {
+            return Float.parseFloat(validacion);
+        } catch (NumberFormatException a) {
+            return validInt(validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
+        }
+    }
+
+    private float validRango(float validacion, String mensajeVal){
+        if(validacion > 0 && validacion < 5){
+            try{
+                return validacion;
+            }
+            catch(NumberFormatException a){
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
+            }
+        }
+        return validRango(validFloat(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
+    }
 }
