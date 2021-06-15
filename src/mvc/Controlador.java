@@ -45,15 +45,17 @@ public class Controlador{
                 }
 
                 //Pedimos datos del repartidor
-                String nombre = compareString(JOptionPane.showInputDialog("Nombre del repartidor: "), "Nombre del repartidor: ");
-                String apellido = compareString(JOptionPane.showInputDialog("Apellido del repartidor: "), "Apellido del repartidor: ");
+                String nombre = validString(JOptionPane.showInputDialog("Nombre del repartidor: "), "Nombre del repartidor: ");
+                String apellido = validString(JOptionPane.showInputDialog("Apellido del repartidor: "), "Apellido del repartidor: ");
                 //TODO: Comprobar que el string pase a entero
-                int edad = Integer.parseInt(compareString(JOptionPane.showInputDialog("Edad del repartidor: "), "Edad del repartidor: "));
-                char genero = JOptionPane.showInputDialog("Genero del repartidor (M o F): ").charAt(0);
-                JOptionPane.showMessageDialog(null, genero);
-                String medioTransporte = JOptionPane.showInputDialog("Medio de transporte: ");
-                int tiempoLlegada = Integer.parseInt(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "));
-                float calificacion = Float.parseFloat(JOptionPane.showInputDialog("Calificación de 1 - 5 estrellas: "));
+                int edad = Integer.parseInt(validString(JOptionPane.showInputDialog("Edad del repartidor: "), "Edad del repartidor: "));
+                //TODO: Validar que sea M o F
+                char genero = validString(JOptionPane.showInputDialog("Genero del repartidor (M o F): "), "Genero del repartidor (M o F): ").charAt(0);
+                String medioTransporte = validString(JOptionPane.showInputDialog("Medio de transporte: "), "Medio de transporte: ");
+                // TODO: Comprobar que el string pase a entero
+                int tiempoLlegada = Integer.parseInt(validString(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "), "Tiempo promedio de llegada (minutos): "));
+                //TODO: Comprobar que el string pase a flotante y esté en el rango solicitado
+                float calificacion = Float.parseFloat(validString(JOptionPane.showInputDialog("Calificación de 1 - 5 estrellas: "), "Calificación de 1 - 5 estrellas: "));
 
                 //Registramos los datos del repartidor (instanciamos persona y repartidor)
                 Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero, medioTransporte, tiempoLlegada, calificacion);
@@ -69,9 +71,9 @@ public class Controlador{
 
             else if(vista.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
-                String nombre = compareString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
-                String ubicacion = compareString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
-                String telefono = compareString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
+                String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
+                String ubicacion = validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
+                String telefono = validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
 
                 //Registramos los datos del restaurante
                 modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
@@ -92,7 +94,7 @@ public class Controlador{
 
     //Metodo recursivo para validar que la entrada de texto no sea nula
     //Primer parametro es el texto a validar, el segundo parametro es el mensaje para pedir un dato valido
-    private String compareString(String validacion, String mensajeVal) {
+    private String validString(String validacion, String mensajeVal) {
         if (!"".equals(validacion)) {
             try{
                 return validacion;
@@ -100,7 +102,7 @@ public class Controlador{
                 JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
             }
         }
-        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
+        return validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
 
     /*private char comparString(char validacion, String mensajeVal) {
