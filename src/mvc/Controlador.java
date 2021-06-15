@@ -32,11 +32,11 @@ public class Controlador{
                 //mostrarMenú
             }
 
-            if(vista.btnPedido == e.getSource()) {
+            else if(vista.btnPedido == e.getSource()) {
                 //realizarPedido
             }
 
-            if(vista.btnRegRepartidor == e.getSource()) {
+            else if(vista.btnRegRepartidor == e.getSource()) {
 
                 //Si no se han registrado datos del restaurante, no podemos crear repartidores
                 if(modelo.miRestaurante == null){
@@ -61,11 +61,11 @@ public class Controlador{
                 JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
             }
 
-            if(vista.btnRegPlatilo == e.getSource()) {
+            else if(vista.btnRegPlatilo == e.getSource()) {
                 //regsitrarPlatillo
             }
 
-            if(vista.btnRegRestaurante == e.getSource()) {
+            else if(vista.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
                 String nombre = JOptionPane.showInputDialog("Nombre del restaurante: ");
                 String ubicacion = JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: ");     
@@ -80,11 +80,17 @@ public class Controlador{
                 vista.telefonoRestaurante.setText(modelo.miRestaurante.getTelefono());
             }
 
-            if(vista.btnSalir == e.getSource()) {
+            else if(vista.btnSalir == e.getSource()) {
                 System.exit(0);
             }
 
 
         }
     };
+
+    /*private void compareString(String compare) {
+        if (!"".equals(compare)) {
+            try
+        }
+    }*/
 }
