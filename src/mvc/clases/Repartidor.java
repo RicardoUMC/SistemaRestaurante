@@ -9,9 +9,7 @@ public class Repartidor extends Persona {
     public Repartidor() {}
 
     public Repartidor(String nombre, String apellido, int edad, char genero, String medioTransporte, int tiempoLlegada, float calificacion){
-        //super(nombre, apellido, edad, genero);
 
-        //Se pone "this.atributo" porque no se pueden pasar los datos a Persona (Clase Abstracta)
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
