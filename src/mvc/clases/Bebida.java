@@ -5,9 +5,9 @@ public class Bebida implements IReceta {
     private float precio;
     private String ingredientes;
 
-    Bebida(){    };
+    public Bebida(){    };
 
-    Bebida(String nombre, float precio, String ingredientes){
+    public Bebida(String nombre, float precio, String ingredientes){
         this.nombre = nombre;
         this.precio = precio;
         this.ingredientes = ingredientes;

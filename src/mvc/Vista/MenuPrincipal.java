@@ -1,17 +1,18 @@
-package mvc;
+package mvc.Vista;
+
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import java.awt.FlowLayout;
+
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Dimension;
 
-public class Vista  extends JFrame{
+public class MenuPrincipal extends JFrame{
 
     //Defino las ventanas y elementos globales
     // public JFrame ventanaMenuPrincipal = new JFrame();
@@ -22,8 +23,8 @@ public class Vista  extends JFrame{
     public JLabel telefonoRestaurante = new JLabel();
 
     //Método para mostrar el Menú Principal
-    public void menuPrincipal(){
-        this.setTitle("Sistema Restaurante");
+    public void mostrar(){
+        setTitle("Sistema Restaurante");
         JPanel panelNorte = new JPanel();
         JPanel panelCentro = new JPanel();
         panelNorte.setLayout(new GridBagLayout());
@@ -102,5 +103,6 @@ public class Vista  extends JFrame{
 		setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
+
 }
 

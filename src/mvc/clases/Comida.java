@@ -5,9 +5,9 @@ public class Comida implements IReceta {
     private float precio;
     private String ingredientes;
 
-    Comida(){    };
+    public Comida(){    };
 
-    Comida(String nombre, float precio, String ingredientes){
+    public Comida(String nombre, float precio, String ingredientes){
         this.nombre = nombre;
         this.precio = precio;
         this.ingredientes = ingredientes;

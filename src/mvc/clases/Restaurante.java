@@ -1,11 +1,15 @@
 package mvc.clases;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 public class Restaurante implements IReceta {
     private String nombre;
     private String ubicacion;
     private String telefono;
+    protected ArrayList <Comida> comidas;
+    protected ArrayList <Bebida> bebidas;
+    protected ArrayList <Postre> postres;
     protected ArrayList <Pedido> pedido;
     public ArrayList <Repartidor> repartidores;
 
@@ -16,6 +20,9 @@ public class Restaurante implements IReceta {
     public Restaurante(String nombre, String ubicacion, String telefono) {
         this.pedido = new ArrayList<Pedido>();
         this.repartidores = new ArrayList<Repartidor>();
+        this.comidas = new ArrayList<>();
+        this.bebidas = new ArrayList<>();
+        this.postres = new ArrayList<>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.telefono = telefono;
@@ -47,5 +54,12 @@ public class Restaurante implements IReceta {
 
     public void agregarRepartidor (Repartidor r){
         repartidores.add(r);
+    }
+
+    public void agregarPlatillo (Comida c, Bebida b, Postre p){
+        
+        comidas.add(c);
+        bebidas.add(b);
+        postres.add(p);
     }
 }

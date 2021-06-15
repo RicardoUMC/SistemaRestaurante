@@ -1,6 +1,7 @@
 package sistemarestaurante;
 
 import mvc.*;
+import mvc.Vista.*;
 
 public class SistemaRestaurante {
 

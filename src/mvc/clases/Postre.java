@@ -5,9 +5,9 @@ public class Postre implements IReceta {
     private float precio;
     private String ingredientes;
 
-    Postre(){    };
+    public Postre(){    };
 
-    Postre(String nombre, float precio, String ingredientes){
+    public Postre(String nombre, float precio, String ingredientes){
         this.nombre = nombre;
         this.precio = precio;
         this.ingredientes = ingredientes;
