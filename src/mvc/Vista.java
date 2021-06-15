@@ -23,6 +23,7 @@ public class Vista  extends JFrame{
 
     //Método para mostrar el Menú Principal
     public void menuPrincipal(){
+        this.setTitle("Sistema Restaurante");
         JPanel panelNorte = new JPanel();
         JPanel panelCentro = new JPanel();
         panelNorte.setLayout(new GridBagLayout());

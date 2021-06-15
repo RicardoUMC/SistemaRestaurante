@@ -44,22 +44,26 @@ public class Controlador{
                     return;
                 }
 
+                String nomRep = "Nombre del repartidor: "; 
+                String apeRep = "Apellido del repartidor: ";
+                String edRep = "Edad del repartidor: ";
+                String genRep = "Género del repartidor (F o M):";
+                String transRep = "Medio de transporte: ";
+                String tiemRep = "Tiempo promedio de llegada (minutos): "; 
+                String calRep = "Calificación de 1 - 5 estrellas: ";
+
                 //Pedimos datos del repartidor
-                String nombre = validString(JOptionPane.showInputDialog("Nombre del repartidor: "), "Nombre del repartidor: ");
-                String apellido = validString(JOptionPane.showInputDialog("Apellido del repartidor: "), "Apellido del repartidor: ");
-                //TODO: Comprobar que el string pase a entero
-                int edad = Integer.parseInt(validString(JOptionPane.showInputDialog("Edad del repartidor: "), "Edad del repartidor: "));
-                
+                String nombre = validString(JOptionPane.showInputDialog(nomRep), nomRep);
+                String apellido = validString(JOptionPane.showInputDialog(apeRep), apeRep);
+                int edad = validInt(validString(JOptionPane.showInputDialog(edRep), edRep), edRep);
                 //Se valida solamente F o M
                 String[] options = {"F", "M"};
-                String n = (String) JOptionPane.showInputDialog(null, "Género del repartidor:", null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                String n = (String) JOptionPane.showInputDialog(null, genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                 char genero = n.charAt(0);
-                
-                String medioTransporte = validString(JOptionPane.showInputDialog("Medio de transporte: "), "Medio de transporte: ");
-                // TODO: Comprobar que el string pase a entero
-                int tiempoLlegada = Integer.parseInt(validString(JOptionPane.showInputDialog("Tiempo promedio de llegada (minutos): "), "Tiempo promedio de llegada (minutos): "));
+                String medioTransporte = validString(JOptionPane.showInputDialog(transRep), transRep);
+                int tiempoLlegada = validInt(validString(JOptionPane.showInputDialog(tiemRep), tiemRep), tiemRep);
                 //TODO: Comprobar que el string pase a flotante y esté en el rango solicitado
-                float calificacion = Float.parseFloat(validString(JOptionPane.showInputDialog("Calificación de 1 - 5 estrellas: "), "Calificación de 1 - 5 estrellas: "));
+                float calificacion = Float.parseFloat(validString(JOptionPane.showInputDialog(calRep), calRep));
 
                 //Registramos los datos del repartidor (instanciamos persona y repartidor)
                 Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero, medioTransporte, tiempoLlegada, calificacion);
@@ -67,6 +71,7 @@ public class Controlador{
                 //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                 modelo.guardarRepartidor(repartidor);
                 JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
+
             }
 
             else if(vista.btnRegPlatilo == e.getSource()) {
@@ -109,36 +114,12 @@ public class Controlador{
         return validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
 
-    /*private char comparString(char validacion, String mensajeVal) {
-        if (!"".equals(validacion)) {
-            try {
-                return validacion;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
-            }
+    private int validInt(String validacion, String mensajeVal) { 
+        try {
+            return Integer.parseInt(validacion);
+        } catch (NumberFormatException a) {
+            return validInt(validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
         }
-        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
-    }*/
-
-    /*private String compareString(String validacion, String mensajeVal) {
-        if (!"".equals(validacion)) {
-            try {
-                return validacion;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
-            }
-        }
-        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
 
-    private String compareString(String validacion, String mensajeVal) {
-        if (!"".equals(validacion)) {
-            try {
-                return validacion;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "No se pudo registrar el valor apropiadamente.");
-            }
-        }
-        return compareString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
-    }*/
 }
