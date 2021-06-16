@@ -2,6 +2,8 @@ package mvc;
 import mvc.Vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import mvc.clases.*;
 
@@ -65,8 +67,9 @@ public class Controlador{
                     String transRep = "Medio de transporte: ";
     
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
-                    modelo.regRepartidor = new Repartidor();
-
+                    modelo.regRepartidor = new Repartidor();  
+                    modelo.miRestaurante.repartidores = new ArrayList<Repartidor>();
+                    
                     //Pedimos datos del repartidor
                     modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(nomRep), nomRep));
                     modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(apeRep), apeRep));
@@ -83,14 +86,12 @@ public class Controlador{
     
                     //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                     try {
-                        //modelo.guardarRepartidor(modelo.regRepartidor);
-                        modelo.miRestaurante.getRepartidores().add(modelo.regRepartidor);
+                        modelo.miRestaurante.repartidores.add(modelo.regRepartidor);
                         JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
                     }
-                    return;
-                    
+                    return;                    
                 }
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
             }
