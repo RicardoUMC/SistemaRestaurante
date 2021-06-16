@@ -2,22 +2,20 @@ package mvc.clases;
 
 public class Repartidor extends Persona {
 
+    protected int repartidor_No;    
     protected String medioTransporte;    
-    protected float calificacion;
-    protected char genero;
 
     public Repartidor() {}
 
-    public Repartidor(String nombre, String apellido, int edad, char genero, String medioTransporte, int tiempoLlegada, float calificacion){
+    public Repartidor(String nombre, String apellido, int edad, char genero,int repartidor_No,String medioTransporte){
 
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.genero = genero;
+        this.repartidor_No= repartidor_No;
         this.medioTransporte = medioTransporte;
-        this.calificacion = calificacion;
     }
-
     @Override
     public void set_nombre(String nombre){
 
@@ -59,6 +57,17 @@ public class Repartidor extends Persona {
     @Override
     public char get_genero() {
         return genero;
+    }
+    public void set_repartidor_No(int repartidor_No){
+
+        this.repartidor_No = repartidor_No;
+
+    }
+
+    public int get_repartidor_No(){
+
+        return repartidor_No;
+
     }
 
 }
