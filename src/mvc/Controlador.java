@@ -35,7 +35,7 @@ public class Controlador{
     ActionListener listenerMenu = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            //Mostrar menu
             if(menuPrincipal.btnMostrarMenu == e.getSource()) {
                 //Si no se han registrado los datos del Restaurante, no podemos crear platillos
                 if (existeRestaurante()){
@@ -51,11 +51,11 @@ public class Controlador{
                 }
                 JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
             }
-
+            //Realizar Pedido
             else if(menuPrincipal.btnPedido == e.getSource()) {
                 //realizarPedido
             }
-
+            //Registrar repartidores
             else if(menuPrincipal.btnRegRepartidor == e.getSource()) {
                 //Si no se han registrado datos del restaurante, no podemos crear repartidores
                 if(existeRestaurante()){
@@ -89,7 +89,7 @@ public class Controlador{
                 }
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
             }
-
+            //Registrar platillos
             else if(menuPrincipal.btnRegPlatilo == e.getSource()) {
                 //Si no se han registrado datos del restaurante, no podemos crear platillos
                 if(existeRestaurante()){
@@ -130,7 +130,7 @@ public class Controlador{
                 }
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");                
             }
-
+            //Registrar restaurante
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
                 String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
@@ -145,7 +145,7 @@ public class Controlador{
                 menuPrincipal.ubicacionRestaurante.setText(modelo.miRestaurante.getUbicacion());
                 menuPrincipal.telefonoRestaurante.setText(modelo.miRestaurante.getTelefono());
             }
-
+            //Salir
             else if(menuPrincipal.btnSalir == e.getSource()) {
                 System.exit(0);
             }
