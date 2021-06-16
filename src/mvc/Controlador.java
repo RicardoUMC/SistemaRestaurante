@@ -68,20 +68,14 @@ public class Controlador{
                     modelo.regRepartidor = new Repartidor();
 
                     //Pedimos datos del repartidor
-                    //String nombre = validString(JOptionPane.showInputDialog(nomRep), nomRep);
                     modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(nomRep), nomRep));
-                    //String apellido = validString(JOptionPane.showInputDialog(apeRep), apeRep);
                     modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(apeRep), apeRep));
-                    //int edad = validInt(validString(JOptionPane.showInputDialog(edRep), edRep), edRep);
                     modelo.regRepartidor.setEdad(validInt(validString(JOptionPane.showInputDialog(edRep), edRep), edRep));
                     //Se valida solamente F o M
                     String[] options = {"F", "M"};
                     String n = (String) JOptionPane.showInputDialog(null, genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                    //char genero = n.charAt(0);
                     modelo.regRepartidor.setGenero(n.charAt(0));
-                    //int repartidor_No = validInt(validString(JOptionPane.showInputDialog(noRep), noRep), noRep);
                     modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(noRep), noRep), noRep));
-                    //String medioTransporte = validString(JOptionPane.showInputDialog(transRep), transRep);
                     modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(transRep), transRep));
                     
                     //Registramos los datos del repartidor (instanciamos persona y repartidor)
@@ -89,7 +83,8 @@ public class Controlador{
     
                     //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                     try {
-                        modelo.guardarRepartidor(modelo.regRepartidor);
+                        //modelo.guardarRepartidor(modelo.regRepartidor);
+                        modelo.miRestaurante.agregarRepartidor(modelo.regRepartidor);
                         JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
