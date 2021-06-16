@@ -129,8 +129,11 @@ public class MenuDelDia extends JFrame{
         Object [] fila = new Object[2];
         
         for(int i = 0; i < data.length; i++){
+<<<<<<< HEAD
             System.out.println(data[i][0]);         
             System.out.println(data[i][1]);
+=======
+>>>>>>> 893b3b51856c353eae35c646c391d6c124bc114d
             fila[0] = data[i][0];
             fila[1] = data[i][1];
             modelo.addRow(fila);  
