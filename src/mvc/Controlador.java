@@ -3,11 +3,7 @@ import mvc.Vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import mvc.clases.Repartidor;
-import mvc.clases.Restaurante;
-import mvc.clases.Comida;
-import mvc.clases.Bebida;
-import mvc.clases.Postre;
+import mvc.clases.*;
 
 public class Controlador{
     
@@ -133,17 +129,12 @@ public class Controlador{
             }
             //Registrar restaurante
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
+                //Instanciamos un Restaurante
                 modelo.miRestaurante = new Restaurante();
-                //Pedimos datos al usuario
+                //Pedimos datos al usuario y registramos los datos
                 modelo.miRestaurante.setNombre(validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: "));
-                //String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
                 modelo.miRestaurante.setUbicacion(validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: "));
-                //String ubicacion = validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
                 modelo.miRestaurante.setTelefono(validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: "));
-                //String telefono = validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
-                
-                //Registramos los datos del restaurante
-                //modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
 
                 //Asignamos dichos datos a los labels del menu
                 menuPrincipal.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
@@ -226,7 +217,7 @@ public class Controlador{
 
     //Metodo recursivo para validar que la entrada de texto no sea nula
     //Primer parametro es el texto a validar, el segundo parametro es el mensaje para pedir un dato valido
-    public String validString(String validacion, String mensajeVal) {
+    private String validString(String validacion, String mensajeVal) {
         if (!"".equals(validacion)) {
             try{
                 return validacion;
@@ -237,7 +228,7 @@ public class Controlador{
         return validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
 
-    public int validInt(String validacion, String mensajeVal) { 
+    private int validInt(String validacion, String mensajeVal) { 
         try {
             return Integer.parseInt(validacion);
         } catch (NumberFormatException a) {
@@ -245,7 +236,7 @@ public class Controlador{
         }
     }
 
-    public float validFloat(String validacion, String mensajeVal) { 
+    private float validFloat(String validacion, String mensajeVal) { 
         try {
             return Float.parseFloat(validacion);
         } catch (NumberFormatException a) {
