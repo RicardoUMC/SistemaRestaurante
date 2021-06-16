@@ -38,7 +38,8 @@ public class Pedido {
         this.idRepartidor = idRepartidor;
     }
 
-    public void agregarPedido(Comida comida, Bebida bebida, Postre postre){
+    //Agrega un platillo a la orden 
+    public void agregarPlatillo(Comida comida, Bebida bebida, Postre postre){
         this.comidas.add(comida);
         this.bebidas.add(bebida);
         this.postres.add(postre);

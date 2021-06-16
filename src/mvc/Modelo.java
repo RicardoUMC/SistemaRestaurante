@@ -15,7 +15,8 @@ public class Modelo {
 
     //Método que invoca el botón 2
     public void guardarPedido(Comida comida, Bebida bebida, Postre postre){
-        pedido.agregarPedido(comida, bebida, postre);
+        //Se puede llamar cuantas veces sea necesario, dependiendo de la cantidad de platillos que el usuario añada
+        pedido.agregarPlatillo(comida, bebida, postre);
     }
 
     //Método que invoca el botón 3
