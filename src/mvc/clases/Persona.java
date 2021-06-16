@@ -13,20 +13,20 @@ public abstract class Persona {
 
     }
 
-    public abstract void set_nombre(String nombre);
+    public abstract void setNombre(String nombre);
 
-    public abstract String get_nombre();
+    public abstract String getNombre();
 
-    public abstract void set_apellido(String apellido);
+    public abstract void setApellido(String apellido);
 
-    public abstract String get_apellido();
+    public abstract String getApellido();
 
-    public abstract void set_edad(int edad);
+    public abstract void setEdad(int edad);
 
-    public abstract int get_edad();
+    public abstract int getEdad();
 
-    public abstract void set_genero(char genero);
+    public abstract void setGenero(char genero);
 
-    public abstract char get_genero();
+    public abstract char getGenero();
 
 }

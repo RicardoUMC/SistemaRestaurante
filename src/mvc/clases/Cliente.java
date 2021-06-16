@@ -3,7 +3,7 @@ package mvc.clases;
 public class Cliente extends Persona {
 
     protected String direccion;
-    protected int numero_telefono;
+    protected int numeroTelefono;
 
     Cliente() {}
 
@@ -15,68 +15,68 @@ public class Cliente extends Persona {
     }
 
     @Override
-    public void set_nombre(String nombre){
+    public void setNombre(String nombre){
 
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
     @Override
-    public String get_nombre(){
+    public String getNombre(){
 
         return nombre;      
     }
     @Override
-    public void set_apellido(String apellido) {
+    public void setApellido(String apellido) {
         
         this.apellido = apellido;
         
     }
     @Override
-    public String get_apellido() {
+    public String getApellido() {
         
         return apellido;
     }
     @Override
-    public void set_edad(int edad) {
+    public void setEdad(int edad) {
         
         this.edad = edad;
         
     }
     @Override
-    public int get_edad() {
+    public int getEdad() {
         
         return edad;
     }
     @Override
-    public void set_genero(char genero) {
+    public void setGenero(char genero) {
         
         this.genero = genero;
     }
     @Override
-    public char get_genero() {
+    public char getGenero() {
         
         return genero;
     }
 
-    public void set_direccion(String direccion){
+    public void setDireccion(String direccion){
 
         this.direccion = direccion;
 
     }
 
-    public String get_direccion(){
+    public String getDireccion(){
 
         return direccion;
     }
 
-    public void set_numero_tel(int telefono){
+    public void setNumTel(int telefono){
 
-        this.numero_telefono = telefono;
+        this.numeroTelefono = telefono;
 
     }
 
-    public int get_numero_tel(){
+    public int getNumTel(){
 
-        return numero_telefono;
+        return numeroTelefono;
     }    
 
     

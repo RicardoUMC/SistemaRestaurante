@@ -2,72 +2,80 @@ package mvc.clases;
 
 public class Repartidor extends Persona {
 
-    protected int repartidor_No;    
+    protected int repartidorNo;    
     protected String medioTransporte;    
 
     public Repartidor() {}
 
-    public Repartidor(String nombre, String apellido, int edad, char genero,int repartidor_No,String medioTransporte){
+    public Repartidor(String nombre, String apellido, int edad, char genero,int repartidorNo,String medioTransporte){
 
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.genero = genero;
-        this.repartidor_No= repartidor_No;
+        this.repartidorNo= repartidorNo;
         this.medioTransporte = medioTransporte;
     }
     @Override
-    public void set_nombre(String nombre){
+    public void setNombre(String nombre){
 
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
     @Override
-    public String get_nombre(){
+    public String getNombre(){
 
         return nombre;      
     }
     @Override
-    public void set_apellido(String apellido) {
+    public void setApellido(String apellido) {
         
         this.apellido = apellido;
         
     }
     @Override
-    public String get_apellido() {
+    public String getApellido() {
         
         return apellido;
     }
     @Override
-    public void set_edad(int edad) {
+    public void setEdad(int edad) {
         
         this.edad = edad;
         
     }
     @Override
-    public int get_edad() {
+    public int getEdad() {
         
         return edad;
     }
 
     @Override
-    public void set_genero(char genero) {
+    public void setGenero(char genero) {
         this.genero = genero;
     }
 
     @Override
-    public char get_genero() {
+    public char getGenero() {
         return genero;
     }
-    public void set_repartidor_No(int repartidor_No){
+    public void setRepartidorNo(int repartidorNo){
 
-        this.repartidor_No = repartidor_No;
+        this.repartidorNo = repartidorNo;
 
     }
 
-    public int get_repartidor_No(){
+    public int getRepartidorNo(){
 
-        return repartidor_No;
+        return repartidorNo;
 
+    }
+
+    public void setMedioTransporte(String medioTransporte) {
+        this.medioTransporte = medioTransporte;
+    }
+
+    public String getMedioTransporte() {
+        return medioTransporte;
     }
 
 }

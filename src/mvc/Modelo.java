@@ -7,6 +7,7 @@ public class Modelo {
     public Comida regComida;
     public Bebida regBebida;
     public Postre regPostre;
+    public Repartidor regRepartidor;
 
     //Método que invoca el botón 3
     public void guardarRepartidor (Repartidor r){
