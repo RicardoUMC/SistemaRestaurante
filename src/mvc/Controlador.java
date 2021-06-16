@@ -68,9 +68,8 @@ public class Controlador{
                     String apeRep = "Apellido del repartidor: ";
                     String edRep = "Edad del repartidor: ";
                     String genRep = "Género del repartidor (F o M):";
+                    String noRep = "Asigne un numero de repartidor: "; 
                     String transRep = "Medio de transporte: ";
-                    String tiemRep = "Tiempo promedio de llegada (minutos): "; 
-                    String calRep = "Calificación de 1 - 5 estrellas: ";
     
                     //Pedimos datos del repartidor
                     String nombre = validString(JOptionPane.showInputDialog(nomRep), nomRep);
@@ -80,12 +79,11 @@ public class Controlador{
                     String[] options = {"F", "M"};
                     String n = (String) JOptionPane.showInputDialog(null, genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                     char genero = n.charAt(0);
+                    int repartidor_No = validInt(validString(JOptionPane.showInputDialog(noRep), noRep), noRep);
                     String medioTransporte = validString(JOptionPane.showInputDialog(transRep), transRep);
-                    int tiempoLlegada = validInt(validString(JOptionPane.showInputDialog(tiemRep), tiemRep), tiemRep);
-                    float calificacion = validRango(validFloat(JOptionPane.showInputDialog(calRep), calRep), calRep);
-    
+                    
                     //Registramos los datos del repartidor (instanciamos persona y repartidor)
-                    Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero, medioTransporte, tiempoLlegada, calificacion);
+                    Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero,repartidor_No, medioTransporte);
     
                     //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                     modelo.guardarRepartidor(repartidor);

@@ -28,10 +28,12 @@ public class Restaurante implements IReceta {
         this.telefono = telefono;
     }
 
+    @Override
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    @Override
     public String getNombre() {
         return nombre;
     }
