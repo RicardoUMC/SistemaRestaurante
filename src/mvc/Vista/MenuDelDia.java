@@ -62,7 +62,7 @@ public class MenuDelDia extends JFrame{
 
         //añadimos títlo
 
-        tituloApp.setFont(tituloApp.getFont().deriveFont(40.0f));
+        tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         panelNorte.add(tituloApp);
 
         
