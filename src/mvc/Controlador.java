@@ -133,12 +133,15 @@ public class Controlador{
             //Registrar restaurante
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
                 //Pedimos datos al usuario
-                String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
-                String ubicacion = validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
-                String telefono = validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
-
+                modelo.miRestaurante.setNombre(validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: "));
+                //String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
+                modelo.miRestaurante.setUbicacion(validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: "));
+                //String ubicacion = validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: ");
+                modelo.miRestaurante.setTelefono(validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: "));
+                //String telefono = validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: ");
+                
                 //Registramos los datos del restaurante
-                modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
+                //modelo.registrarDatosRestaurante(nombre, ubicacion, telefono);
 
                 //Asignamos dichos datos a los labels del menu
                 menuPrincipal.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
