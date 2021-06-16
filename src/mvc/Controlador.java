@@ -256,7 +256,7 @@ public class Controlador{
         try {
             return Float.parseFloat(validacion);
         } catch (NumberFormatException a) {
-            return validInt(validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
+            return validFloat(validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
         }
     }
 
