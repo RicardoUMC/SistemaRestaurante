@@ -65,6 +65,7 @@ public class Controlador{
                     String genRep = "Género del repartidor (F o M):";
                     String noRep = "Asigne un numero de repartidor: "; 
                     String transRep = "Medio de transporte: ";
+                    String calRep = "Calificacion del repartidor (1 - 5): ";
     
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                     modelo.regRepartidor = new Repartidor();  
@@ -80,6 +81,7 @@ public class Controlador{
                     modelo.regRepartidor.setGenero(n.charAt(0));
                     modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(noRep), noRep), noRep));
                     modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(transRep), transRep));
+                    modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(calRep), calRep), calRep), calRep));
 
                     try {
                         modelo.miRestaurante.repartidores.add(modelo.regRepartidor);
@@ -129,7 +131,13 @@ public class Controlador{
                     //modelo.miRestaurante.getComidas().add(modelo.regComida);
                     //modelo.miRestaurante.getBebidas().add(modelo.regBebida);
                     //modelo.miRestaurante.getPostres().add(modelo.regPostre);
-                    modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
+                    
+                    try {
+                        modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
+                        JOptionPane.showMessageDialog(null, "El postre se ha guardado correctamente.");
+                    } catch (NullPointerException nullPointer) {
+                        JOptionPane.showMessageDialog(null, "No se pudo completar.");
+                    }
 
                     return;
                 }
@@ -251,7 +259,7 @@ public class Controlador{
         }
     }
 
-    /*private float validRango(float validacion, String mensajeVal){
+    private float validRango(float validacion, String mensajeVal){
         if(validacion >= 0 && validacion <= 5){
             try{
                 return validacion;
@@ -261,5 +269,5 @@ public class Controlador{
             }
         }
         return validRango(validFloat(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
-    }*/
+    }
 }

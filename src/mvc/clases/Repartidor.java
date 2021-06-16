@@ -3,7 +3,8 @@ package mvc.clases;
 public class Repartidor extends Persona {
 
     protected int repartidorNo;    
-    protected String medioTransporte;    
+    protected String medioTransporte;
+    protected float calificacion;    
 
     public Repartidor() {}
 
@@ -76,6 +77,14 @@ public class Repartidor extends Persona {
 
     public String getMedioTransporte() {
         return medioTransporte;
+    }
+
+    public void setCalificacion(float calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public float getCalificacion() {
+        return calificacion;
     }
 
 }
