@@ -11,6 +11,13 @@ public class Modelo {
     public Postre regPostre;
     public Repartidor regRepartidor;
 
+    public Pedido pedido;
+
+    //Método que invoca el botón 2
+    public void guardarPedido(Comida comida, Bebida bebida, Postre postre){
+        pedido.agregarPedido(comida, bebida, postre);
+    }
+
     //Método que invoca el botón 3
     public void guardarRepartidor (Repartidor r){
         miRestaurante.agregarRepartidor(r);

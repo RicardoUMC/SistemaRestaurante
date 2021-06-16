@@ -133,9 +133,6 @@ public class MenuDelDia extends JFrame{
             fila[1] = data[i][1];
             modelo.addRow(fila);  
         }
-        
-        // tablaComidas.setModel(modelo); 
-        // modelo.fireTableDataChanged();
 
         return modelo;
         
