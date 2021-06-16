@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import mvc.clases.Repartidor;
+import mvc.clases.Restaurante;
 import mvc.clases.Comida;
 import mvc.clases.Bebida;
 import mvc.clases.Postre;
@@ -132,6 +133,7 @@ public class Controlador{
             }
             //Registrar restaurante
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
+                modelo.miRestaurante = new Restaurante();
                 //Pedimos datos al usuario
                 modelo.miRestaurante.setNombre(validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: "));
                 //String nombre = validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: ");
@@ -224,7 +226,7 @@ public class Controlador{
 
     //Metodo recursivo para validar que la entrada de texto no sea nula
     //Primer parametro es el texto a validar, el segundo parametro es el mensaje para pedir un dato valido
-    private String validString(String validacion, String mensajeVal) {
+    public String validString(String validacion, String mensajeVal) {
         if (!"".equals(validacion)) {
             try{
                 return validacion;
@@ -235,7 +237,7 @@ public class Controlador{
         return validString(JOptionPane.showInputDialog(mensajeVal), mensajeVal);
     }
 
-    private int validInt(String validacion, String mensajeVal) { 
+    public int validInt(String validacion, String mensajeVal) { 
         try {
             return Integer.parseInt(validacion);
         } catch (NumberFormatException a) {
@@ -243,7 +245,7 @@ public class Controlador{
         }
     }
 
-    private float validFloat(String validacion, String mensajeVal) { 
+    public float validFloat(String validacion, String mensajeVal) { 
         try {
             return Float.parseFloat(validacion);
         } catch (NumberFormatException a) {
