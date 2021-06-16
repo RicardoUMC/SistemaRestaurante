@@ -84,7 +84,7 @@ public class Controlador{
                     //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
                     try {
                         //modelo.guardarRepartidor(modelo.regRepartidor);
-                        modelo.miRestaurante.agregarRepartidor(modelo.regRepartidor);
+                        modelo.miRestaurante.getRepartidores().add(modelo.regRepartidor);
                         JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
