@@ -20,18 +20,18 @@ public class Comida implements IReceta {
     public String getNombre() {
         return nombre;
     }
-    public void setprecio(float precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
-    public float getprecio() {
+    public float getPrecio() {
         return precio;
     }
-    public void setingredientes(String ingredientes) {
+    public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
 
-    public String getingredientes() {
+    public String getIngredientes() {
         return ingredientes;
     }  
 }

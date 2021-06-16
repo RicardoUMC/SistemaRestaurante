@@ -4,6 +4,9 @@ import mvc.clases.*;
 
 public class Modelo {
     public Restaurante miRestaurante;
+    public Comida regComida;
+    public Bebida regBebida;
+    public Postre regPostre;
 
     //Método que invoca el botón 3
     public void guardarRepartidor (Repartidor r){

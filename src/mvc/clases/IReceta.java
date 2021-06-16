@@ -5,9 +5,9 @@ public interface IReceta {
     public void setNombre(String nombre);
     public String getNombre();
 
-    public void setprecio(float precio);
-    public float getprecio() ;
+    public void setPrecio(float precio);
+    public float getPrecio() ;
 
-    public void setingredientes(String ingredientes);
-    public String getingredientes() ;
+    public void setIngredientes(String ingredientes);
+    public String getIngredientes() ;
 }

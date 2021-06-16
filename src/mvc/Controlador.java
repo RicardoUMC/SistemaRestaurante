@@ -79,10 +79,14 @@ public class Controlador{
                     Repartidor repartidor = new Repartidor(nombre, apellido, edad, genero,repartidor_No, medioTransporte);
     
                     //Guardamos en el arreglo de repartidores, que se encuentra en la clase Restaurante, la cual se invoca desde modelo
-                    modelo.guardarRepartidor(repartidor);
-                    JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
-                    
+                    try {
+                        modelo.guardarRepartidor(repartidor);
+                        JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
+                    } catch (NullPointerException nullPointer) {
+                        JOptionPane.showMessageDialog(null, "No se pudo completar.");
+                    }
                     return;
+                    
                 }
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
             }
@@ -100,28 +104,31 @@ public class Controlador{
                     String prePostre = "Precio del postre: ";
                     String ingPostre = "Ingredientes del postre: ";
 
-                    //Hacemos referencia al objeto
-                    Comida c = new Comida();
-                    Bebida b = new Bebida();
-                    Postre p = new Postre();
-
+                    //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
+                    modelo.regComida = new Comida();
+                    modelo.regBebida = new Bebida();
+                    modelo.regPostre = new Postre();
+                    
                     //Pedimos datos del platillo
                     //Datos de comida
-                    c.setNombre(validString(JOptionPane.showInputDialog(nomComida), nomComida));
-                    c.setprecio(validFloat(JOptionPane.showInputDialog(preComida), preComida));
-                    c.setingredientes(validString(JOptionPane.showInputDialog(ingComida), ingComida));
-
+                    modelo.regComida.setNombre(validString(JOptionPane.showInputDialog(nomComida), nomComida));
+                    modelo.regComida.setPrecio(validFloat(JOptionPane.showInputDialog(preComida), preComida));
+                    modelo.regComida.setIngredientes(validString(JOptionPane.showInputDialog(ingComida), ingComida));
+                    
                     //Datos de la bebida
-                    b.setNombre(validString(JOptionPane.showInputDialog(nomBebida), nomBebida));
-                    b.setprecio(validFloat(JOptionPane.showInputDialog(preBebida), preBebida));
-
+                    modelo.regBebida.setNombre(validString(JOptionPane.showInputDialog(nomBebida), nomBebida));
+                    modelo.regBebida.setPrecio(validFloat(JOptionPane.showInputDialog(preBebida), preBebida));
+                    
                     //Datos del postre
-                    p.setNombre(validString(JOptionPane.showInputDialog(nomPostre), nomPostre));
-                    p.setprecio(validFloat(JOptionPane.showInputDialog(prePostre), prePostre));
-                    p.setingredientes(validString(JOptionPane.showInputDialog(ingPostre), ingPostre));
-
+                    modelo.regPostre.setNombre(validString(JOptionPane.showInputDialog(nomPostre), nomPostre));
+                    modelo.regPostre.setPrecio(validFloat(JOptionPane.showInputDialog(prePostre), prePostre));
+                    modelo.regPostre.setIngredientes(validString(JOptionPane.showInputDialog(ingPostre), ingPostre));
+                    
                     //Agregamos la comida, la bebida y el platillo a los ListArray
-                    modelo.guardarPlatillo(c, b, p);
+                    //modelo.miRestaurante.getComidas().add(modelo.regComida);
+                    //modelo.miRestaurante.getBebidas().add(modelo.regBebida);
+                    //modelo.miRestaurante.getPostres().add(modelo.regPostre);
+                    modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
 
                     return;
                 }
@@ -135,7 +142,6 @@ public class Controlador{
                 modelo.miRestaurante.setNombre(validString(JOptionPane.showInputDialog("Nombre del restaurante: "), "Ingrese un nombre válido: "));
                 modelo.miRestaurante.setUbicacion(validString(JOptionPane.showInputDialog("Ubicación (dirección) del restaurante: "), "Ingrese una dirección válida: "));
                 modelo.miRestaurante.setTelefono(validString(JOptionPane.showInputDialog("Teléfono del restaurante: "), "Ingrese un teléfono válido: "));
-
                 //Asignamos dichos datos a los labels del menu
                 menuPrincipal.nombreRestaurante.setText(modelo.miRestaurante.getNombre());
                 menuPrincipal.ubicacionRestaurante.setText(modelo.miRestaurante.getUbicacion());
@@ -160,7 +166,7 @@ public class Controlador{
             
             if(i < comidas.length){
                 comidas [i][0] = modelo.miRestaurante.getComidas().get(i).getNombre();
-                comidas [i][1] = String.valueOf(modelo.miRestaurante.getComidas().get(i).getprecio());
+                comidas [i][1] = String.valueOf(modelo.miRestaurante.getComidas().get(i).getPrecio());
             }
         }
 
@@ -179,7 +185,7 @@ public class Controlador{
             
             if(i < bebidas.length){
                 bebidas [i][0] = modelo.miRestaurante.getBebidas().get(i).getNombre();
-                bebidas [i][1] = String.valueOf(modelo.miRestaurante.getBebidas().get(i).getprecio());
+                bebidas [i][1] = String.valueOf(modelo.miRestaurante.getBebidas().get(i).getPrecio());
             }
         }
 
@@ -198,7 +204,7 @@ public class Controlador{
             
             if(i < postres.length){
                 postres [i][0] = modelo.miRestaurante.getPostres().get(i).getNombre();
-                postres [i][1] = String.valueOf(modelo.miRestaurante.getPostres().get(i).getprecio());
+                postres [i][1] = String.valueOf(modelo.miRestaurante.getPostres().get(i).getPrecio());
             }
         }
 
