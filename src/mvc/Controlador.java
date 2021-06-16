@@ -49,9 +49,7 @@ public class Controlador{
 
                     return;
                 }
-
                 JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
-
             }
 
             else if(menuPrincipal.btnPedido == e.getSource()) {
@@ -59,9 +57,7 @@ public class Controlador{
             }
 
             else if(menuPrincipal.btnRegRepartidor == e.getSource()) {
-
                 //Si no se han registrado datos del restaurante, no podemos crear repartidores
-
                 if(existeRestaurante()){
                     //Mensajes que se mostrarán al usuario
                     String nomRep = "Nombre del repartidor: "; 
@@ -91,10 +87,7 @@ public class Controlador{
                     
                     return;
                 }
-
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
-
-
             }
 
             else if(menuPrincipal.btnRegPlatilo == e.getSource()) {
@@ -133,12 +126,9 @@ public class Controlador{
                     //Agregamos la comida, la bebida y el platillo a los ListArray
                     modelo.guardarPlatillo(c, b, p);
 
-
                     return;
                 }
-
-                JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");
-                
+                JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");                
             }
 
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
@@ -159,8 +149,6 @@ public class Controlador{
             else if(menuPrincipal.btnSalir == e.getSource()) {
                 System.exit(0);
             }
-
-
         }
     };
 
@@ -260,7 +248,7 @@ public class Controlador{
         }
     }
 
-    private float validRango(float validacion, String mensajeVal){
+    /*private float validRango(float validacion, String mensajeVal){
         if(validacion >= 0 && validacion <= 5){
             try{
                 return validacion;
@@ -270,5 +258,5 @@ public class Controlador{
             }
         }
         return validRango(validFloat(JOptionPane.showInputDialog(mensajeVal), mensajeVal), mensajeVal);
-    }
+    }*/
 }
