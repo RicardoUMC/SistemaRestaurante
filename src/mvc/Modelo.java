@@ -1,5 +1,7 @@
 package mvc;
 
+import java.util.ArrayList;
+
 import mvc.clases.*;
 
 public class Modelo {

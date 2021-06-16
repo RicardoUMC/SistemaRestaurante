@@ -11,7 +11,7 @@ public class Restaurante implements IReceta {
     protected ArrayList <Bebida> bebidas;
     protected ArrayList <Postre> postres;
     protected ArrayList <Pedido> pedido;
-    private ArrayList <Repartidor> repartidores;
+    public ArrayList <Repartidor> repartidores;
 
     public Restaurante() {
         this.pedido = new ArrayList<Pedido>();
