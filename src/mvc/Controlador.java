@@ -159,7 +159,7 @@ public class Controlador{
         int cantidadComidas = modelo.miRestaurante.getComidas().size();
 
         //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
-        String comidas [][] = new String[cantidadComidas + 1][cantidadComidas + 1];
+        String comidas [][] = new String[cantidadComidas][cantidadComidas + 1];
 
         //Extraemos las comidas que hay registradas
         for (int i = 0; i < cantidadComidas; i++) {
@@ -178,7 +178,7 @@ public class Controlador{
         int cantidadBebidas = modelo.miRestaurante.getBebidas().size();
 
         //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
-        String bebidas [][] = new String[cantidadBebidas + 1][cantidadBebidas + 1];
+        String bebidas [][] = new String[cantidadBebidas][cantidadBebidas + 1];
 
         //Extraemos las Bebidas que hay registradas
         for (int i = 0; i < cantidadBebidas; i++) {
@@ -197,7 +197,7 @@ public class Controlador{
         int cantidadPostres = modelo.miRestaurante.getPostres().size();
 
         //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
-        String postres [][] = new String[cantidadPostres + 1][cantidadPostres + 1];
+        String postres [][] = new String[cantidadPostres][cantidadPostres + 1];
 
         //Extraemos las postres que hay registradas
         for (int i = 0; i < cantidadPostres; i++) {
