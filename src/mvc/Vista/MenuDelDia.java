@@ -22,8 +22,8 @@ public class MenuDelDia extends JFrame{
     public JTable tablaPostres = new JTable();
     
     public DefaultTableModel modeloComidas = (DefaultTableModel) tablaComidas.getModel();
-    public DefaultTableModel modeloPostres = new DefaultTableModel();
-    public DefaultTableModel modeloBebidas = new DefaultTableModel();
+    public DefaultTableModel modeloBebidas = (DefaultTableModel) tablaBebidas.getModel();
+    public DefaultTableModel modeloPostres = (DefaultTableModel) tablaPostres.getModel();
     
     //Creamos 4 paneles
     JPanel panelNorte = new JPanel();
@@ -31,41 +31,48 @@ public class MenuDelDia extends JFrame{
     JPanel panelCentro = new JPanel();
     JPanel panelDerecho = new JPanel();
     
+    JLabel tituloApp = new JLabel();
+
     public MenuDelDia() {
+        //Se definen los títulos para los headers de la tabla  
         modeloComidas.addColumn("Nombre");
         modeloComidas.addColumn("Precio");  
+        modeloBebidas.addColumn("Nombre");
+        modeloBebidas.addColumn("Precio");  
+        modeloPostres.addColumn("Nombre");
+        modeloPostres.addColumn("Precio");  
+
         panelCentro.setLayout(new GridBagLayout());
         panelIzquierdo.setLayout(new GridBagLayout());
         panelNorte.setLayout(new FlowLayout());
         panelDerecho.setLayout(new GridBagLayout());
+
+        tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
+        tituloApp = new JLabel("<html><span style='color: teal;'>MENÚ DEL DÍA</span></html>");
     }
     
     public void mostrar (String[][] comidas, String[][] bebidas, String[][] postres){
-
-
+        
         setTitle("Menú del día");
         
         GridBagConstraints c = new GridBagConstraints();
         c.gridwidth = 1;
         c.weightx = 1;
         c.weighty = 1;
-        
-        JLabel titulo = new JLabel();
-        
-        
-
 
         //añadimos títlo
-        titulo = new JLabel("<html><span style='color: teal;'>MENÚ DEL DÍA</span></html>");
-        titulo.setFont(titulo.getFont().deriveFont(40.0f));
-        panelNorte.add(titulo);
 
-        titulo.setFont(titulo.getFont().deriveFont(25.0f));
+        tituloApp.setFont(tituloApp.getFont().deriveFont(40.0f));
+        panelNorte.add(tituloApp);
 
+        
+        JLabel titulo = new JLabel();
 
         //Añadimos sección de comida
         //Creamos tabla comida
-        llenarTabla(comidas);
+        modeloComidas = llenarTabla(modeloComidas, comidas);
+        tablaComidas.setModel(modeloComidas); 
+        modeloComidas.fireTableDataChanged();
         titulo = new JLabel("<html><span style='color: teal;'>Comida</span></html>");
         c.gridx = 0;
         c.gridy = 0;
@@ -77,12 +84,9 @@ public class MenuDelDia extends JFrame{
         
         //Añadimos sección de Bebida
         //Creamos tabla Bebida
-        //Se definen los títulos  
-        modeloBebidas.addColumn("Nombre");
-        modeloBebidas.addColumn("Precio");  
-        //Se llena la tabla con la información que viene desde el controlador
-        // modeloBebidas = llenarTabla(modeloBebidas, bebidas);
-        tablaBebidas.setModel(modeloBebidas);   
+        modeloBebidas = llenarTabla(modeloBebidas, bebidas);
+        tablaBebidas.setModel(modeloBebidas); 
+        modeloBebidas.fireTableDataChanged();
         titulo = new JLabel("<html><span style='color: teal;'>Bebidas</span></html>");
         c.gridx = 0;
         c.gridy = 0;
@@ -91,14 +95,11 @@ public class MenuDelDia extends JFrame{
         c.gridy = 2;   
         panelCentro.add(new JScrollPane(tablaBebidas), c);
         
-        //Añadimos sección de Postres
-        //Creamos tabla Postres
-        //Se definen los títulos  
-        modeloPostres.addColumn("Nombre");
-        modeloPostres.addColumn("Precio");  
-        //Se llena la tabla con la información que viene desde el controlador
-        // modeloPostres = llenarTabla(modeloPostres, postres);
-        tablaPostres.setModel(modeloPostres);     
+        //Añadimos sección de Postre
+        //Creamos tabla Postre
+        modeloPostres = llenarTabla(modeloPostres, postres);
+        tablaPostres.setModel(modeloPostres); 
+        modeloPostres.fireTableDataChanged();   
         titulo = new JLabel("<html><span style='color: teal;'>Postres</span></html>");
         c.gridx = 0;
         c.gridy = 0;
@@ -116,21 +117,14 @@ public class MenuDelDia extends JFrame{
         add(panelDerecho, BorderLayout.LINE_END);
 
         setSize(800, 500);
-		setLocation(800, 300);
+		setLocation(500, 500);
 		setVisible(true);
         pack();
     }
 
     //Llena a tabla a partir de la información que el controlador nos da
-    private void llenarTabla (String [][] data){
-        
-
-        //Se definen los títulos  
-        
-
-
-        
-        modeloComidas.setRowCount(0);
+    private DefaultTableModel llenarTabla (DefaultTableModel modelo, String [][] data){
+        modelo.setRowCount(0);
         
         Object [] fila = new Object[2];
         
@@ -139,16 +133,14 @@ public class MenuDelDia extends JFrame{
             System.out.println(data[i][1]);
             fila[0] = data[i][0];
             fila[1] = data[i][1];
-            modeloComidas.addRow(fila);  
+            modelo.addRow(fila);  
         }
         
-        tablaComidas.setModel(modeloComidas); 
-        modeloComidas.fireTableDataChanged();
-        tablaComidas.setVisible(true);
+        // tablaComidas.setModel(modelo); 
+        // modelo.fireTableDataChanged();
+
+        return modelo;
         
     }
-    // private void buildContractorResultTable(){
-    //     DefaultTableModel model = tablaComidas.getModel();
-    //     model.setDataVector(modeloComidas.getMatchingCriteria(), aModel.getColumnNames());
-    // }
+
 }
