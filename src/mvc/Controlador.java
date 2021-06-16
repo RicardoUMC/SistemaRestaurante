@@ -37,7 +37,21 @@ public class Controlador{
         public void actionPerformed(ActionEvent e) {
             
             if(menuPrincipal.btnMostrarMenu == e.getSource()) {
-                menuDelDia.mostrar();
+                //Si no se han registrado los datos del Restaurante, no podemos crear platillos
+                if (existeRestaurante()){
+
+                    String comidas [][] = obtenerComidas();
+                    String bebidas [][] = obtenerBebidas();
+                    String postres [][] = obtenerPostres();
+
+                    //Le pasamos esta información a la ventana que muestra el menú del día
+                    menuDelDia.mostrar(comidas, bebidas, postres);
+
+                    return;
+                }
+
+                JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
+
             }
 
             else if(menuPrincipal.btnPedido == e.getSource()) {
@@ -151,6 +165,64 @@ public class Controlador{
 
         }
     };
+
+    private String [][] obtenerComidas(){
+        //Contamos las comidas que hay registradas
+        int cantidadComidas = modelo.miRestaurante.getComidas().size();
+
+        //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
+        String comidas [][] = new String[cantidadComidas + 1][cantidadComidas + 1];
+
+        //Extraemos las comidas que hay registradas
+        for (int i = 0; i < cantidadComidas; i++) {
+            
+            if(i < comidas.length){
+                comidas [i][0] = modelo.miRestaurante.getComidas().get(i).getNombre();
+                comidas [i][1] = String.valueOf(modelo.miRestaurante.getComidas().get(i).getprecio());
+            }
+        }
+
+        return comidas;
+    }
+
+    private String [][] obtenerBebidas(){
+        //Contamos las Bebidas que hay registradas
+        int cantidadBebidas = modelo.miRestaurante.getBebidas().size();
+
+        //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
+        String bebidas [][] = new String[cantidadBebidas + 1][cantidadBebidas + 1];
+
+        //Extraemos las Bebidas que hay registradas
+        for (int i = 0; i < cantidadBebidas; i++) {
+            
+            if(i < bebidas.length){
+                bebidas [i][0] = modelo.miRestaurante.getBebidas().get(i).getNombre();
+                bebidas [i][1] = String.valueOf(modelo.miRestaurante.getBebidas().get(i).getprecio());
+            }
+        }
+
+        return bebidas;
+    }
+
+    private String [][] obtenerPostres(){
+        //Contamos las postres que hay registradas
+        int cantidadPostres = modelo.miRestaurante.getPostres().size();
+
+        //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
+        String postres [][] = new String[cantidadPostres + 1][cantidadPostres + 1];
+
+        //Extraemos las postres que hay registradas
+        for (int i = 0; i < cantidadPostres; i++) {
+            
+            if(i < postres.length){
+                postres [i][0] = modelo.miRestaurante.getPostres().get(i).getNombre();
+                postres [i][1] = String.valueOf(modelo.miRestaurante.getPostres().get(i).getprecio());
+            }
+        }
+
+        return postres;
+    }
+
 
     private boolean existeRestaurante(){
         if(modelo.miRestaurante != null){

@@ -11,7 +11,7 @@ public class Restaurante implements IReceta {
     protected ArrayList <Bebida> bebidas;
     protected ArrayList <Postre> postres;
     protected ArrayList <Pedido> pedido;
-    public ArrayList <Repartidor> repartidores;
+    private ArrayList <Repartidor> repartidores;
 
     public Restaurante() {
         this.pedido = new ArrayList<Pedido>();
@@ -57,9 +57,21 @@ public class Restaurante implements IReceta {
     }
 
     public void agregarPlatillo (Comida c, Bebida b, Postre p){
-        
         comidas.add(c);
         bebidas.add(b);
         postres.add(p);
     }
+
+    public ArrayList<Comida> getComidas() {
+        return comidas;
+    }
+
+    public ArrayList<Bebida> getBebidas() {
+        return bebidas;
+    }
+
+    public ArrayList<Postre> getPostres() {
+        return postres;
+    }
+
 }

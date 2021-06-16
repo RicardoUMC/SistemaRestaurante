@@ -95,6 +95,7 @@ public class MenuPrincipal extends JFrame{
         panelCentro.add(btnSalir, c);
 
         //Añadimos paneles a la ventana
+        getContentPane().setLayout(new BorderLayout());
         add(panelNorte, BorderLayout.NORTH);
         add(panelCentro, BorderLayout.CENTER);
 
