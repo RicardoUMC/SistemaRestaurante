@@ -68,9 +68,9 @@ public class Controlador{
                     String calRep = "Calificacion del repartidor (1 - 5): ";
     
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
-                    modelo.regRepartidor = new Repartidor();  
-                    modelo.miRestaurante.repartidores = new ArrayList<Repartidor>();
-                    
+                    modelo.regRepartidor = new Repartidor();
+                    ArrayList <Repartidor> repartidores = modelo.miRestaurante.getRepartidores();
+                    repartidores = new ArrayList<Repartidor>();
                     //Pedimos datos del repartidor
                     modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(nomRep), nomRep));
                     modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(apeRep), apeRep));
@@ -84,7 +84,7 @@ public class Controlador{
                     modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(calRep), calRep), calRep), calRep));
 
                     try {
-                        modelo.miRestaurante.repartidores.add(modelo.regRepartidor);
+                        repartidores.add(modelo.regRepartidor);
                         JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
