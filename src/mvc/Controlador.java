@@ -38,15 +38,21 @@ public class Controlador{
             if(menuPrincipal.btnMostrarMenu == e.getSource()) {
                 //Si no se han registrado los datos del Restaurante, no podemos crear platillos
                 if (existeRestaurante()){
+                    if (modelo.platillos()) {
 
-                    String comidas [][] = obtenerComidas();
-                    String bebidas [][] = obtenerBebidas();
-                    String postres [][] = obtenerPostres();
-
-                    //Le pasamos esta información a la ventana que muestra el menú del día
-                    menuDelDia.mostrar(comidas, bebidas, postres);
-
-                    return;
+                        String comidas [][] = obtenerComidas();
+                        String bebidas [][] = obtenerBebidas();
+                        String postres [][] = obtenerPostres();
+                        
+                        //Le pasamos esta información a la ventana que muestra el menú del día
+                        menuDelDia.mostrar(comidas, bebidas, postres);
+                        
+                        return;
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null, "Aún no se registran platillos.");
+                        return;
+                    }
                 }
                 JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
             }
@@ -58,6 +64,11 @@ public class Controlador{
             else if(menuPrincipal.btnRegRepartidor == e.getSource()) {
                 //Si no se han registrado datos del restaurante, no podemos crear repartidores
                 if(existeRestaurante()){
+                    //Primera vez registrando a un repartidor
+                    if (modelo.miRestaurante.getRepartidores() == null){
+                        ArrayList<Repartidor> repartidor = new ArrayList<Repartidor>();
+                        modelo.miRestaurante.setRepartidores(repartidor);
+                    }
                     //Mensajes que se mostrarán al usuario
                     String nomRep = "Nombre del repartidor: "; 
                     String apeRep = "Apellido del repartidor: ";
@@ -69,8 +80,6 @@ public class Controlador{
     
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                     modelo.regRepartidor = new Repartidor();
-                    ArrayList <Repartidor> repartidores = modelo.miRestaurante.getRepartidores();
-                    repartidores = new ArrayList<Repartidor>();
                     //Pedimos datos del repartidor
                     modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(nomRep), nomRep));
                     modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(apeRep), apeRep));
@@ -84,7 +93,7 @@ public class Controlador{
                     modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(calRep), calRep), calRep), calRep));
 
                     try {
-                        repartidores.add(modelo.regRepartidor);
+                        modelo.guardarRepartidor(modelo.regRepartidor);
                         JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
@@ -97,6 +106,17 @@ public class Controlador{
             else if(menuPrincipal.btnRegPlatilo == e.getSource()) {
                 //Si no se han registrado datos del restaurante, no podemos crear platillos
                 if(existeRestaurante()){
+                    //Primera vez registrando un platillo
+                    if (!modelo.platillos()) {
+                        //Se instancian objetos de las clases de miRestaurante
+                        ArrayList<Comida> comidas = new ArrayList<Comida>();
+                        ArrayList<Bebida> bebidas = new ArrayList<Bebida>();
+                        ArrayList<Postre> postres = new ArrayList<Postre>();
+                        modelo.miRestaurante.setComidas(comidas);
+                        modelo.miRestaurante.setBebidas(bebidas);
+                        modelo.miRestaurante.setPostres(postres);
+                    }
+
                     //Mensajes que se mostrarán al usuario
                     String nomComida = "Nombre de la comida: "; 
                     String preComida = "Precio de la comida: ";
@@ -106,12 +126,11 @@ public class Controlador{
                     String nomPostre = "Nombre del postre: ";
                     String prePostre = "Precio del postre: ";
                     String ingPostre = "Ingredientes del postre: ";
-
+                    
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                     modelo.regComida = new Comida();
                     modelo.regBebida = new Bebida();
                     modelo.regPostre = new Postre();
-                    
                     //Pedimos datos del platillo
                     //Datos de comida
                     modelo.regComida.setNombre(validString(JOptionPane.showInputDialog(nomComida), nomComida));
@@ -134,11 +153,10 @@ public class Controlador{
                     
                     try {
                         modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
-                        JOptionPane.showMessageDialog(null, "El postre se ha guardado correctamente.");
+                        JOptionPane.showMessageDialog(null, "El platillo se ha guardado correctamente.");
                     } catch (NullPointerException nullPointer) {
                         JOptionPane.showMessageDialog(null, "No se pudo completar.");
                     }
-
                     return;
                 }
                 JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");                
@@ -225,9 +243,7 @@ public class Controlador{
         if(modelo.miRestaurante != null){
             return true;
         }
-
         return false;
-        
     }
 
     //Metodo recursivo para validar que la entrada de texto no sea nula

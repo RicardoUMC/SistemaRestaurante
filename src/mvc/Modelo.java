@@ -1,7 +1,5 @@
 package mvc;
 
-import java.util.ArrayList;
-
 import mvc.clases.*;
 
 public class Modelo {
@@ -13,6 +11,12 @@ public class Modelo {
 
     public Pedido pedido;
 
+    public boolean platillos(){
+        if (miRestaurante.getBebidas() != null && miRestaurante.getComidas() != null && miRestaurante.getPostres() != null) {
+            return true;
+        } 
+        return false;
+    }
     //Método que invoca el botón 2
     public void guardarPedido(Comida comida, Bebida bebida, Postre postre){
         //Se puede llamar cuantas veces sea necesario, dependiendo de la cantidad de platillos que el usuario añada
