@@ -69,28 +69,20 @@ public class Controlador{
                         ArrayList<Repartidor> repartidor = new ArrayList<Repartidor>();
                         modelo.miRestaurante.setRepartidores(repartidor);
                     }
-                    //Mensajes que se mostrarán al usuario
-                    String nomRep = "Nombre del repartidor: "; 
-                    String apeRep = "Apellido del repartidor: ";
-                    String edRep = "Edad del repartidor: ";
-                    String genRep = "Género del repartidor (F o M):";
-                    String noRep = "Asigne un numero de repartidor: "; 
-                    String transRep = "Medio de transporte: ";
-                    String calRep = "Calificacion del repartidor (1 - 5): ";
-    
+
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                     modelo.regRepartidor = new Repartidor();
                     //Pedimos datos del repartidor
-                    modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(nomRep), nomRep));
-                    modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(apeRep), apeRep));
-                    modelo.regRepartidor.setEdad(validInt(validString(JOptionPane.showInputDialog(edRep), edRep), edRep));
+                    modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(modelo.nomRep), modelo.nomRep));
+                    modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(modelo.apeRep), modelo.apeRep));
+                    modelo.regRepartidor.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.edRep), modelo.edRep), modelo.edRep));
                     //Se valida solamente F o M
                     String[] options = {"F", "M"};
-                    String n = (String) JOptionPane.showInputDialog(null, genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                    String n = (String) JOptionPane.showInputDialog(null, modelo.genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
                     modelo.regRepartidor.setGenero(n.charAt(0));
-                    modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(noRep), noRep), noRep));
-                    modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(transRep), transRep));
-                    modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(calRep), calRep), calRep), calRep));
+                    modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(modelo.noRep), modelo.noRep), modelo.noRep));
+                    modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(modelo.transRep), modelo.transRep));
+                    modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(modelo.calRep), modelo.calRep), modelo.calRep), modelo.calRep));
 
                     try {
                         modelo.guardarRepartidor(modelo.regRepartidor);
@@ -116,16 +108,6 @@ public class Controlador{
                         modelo.miRestaurante.setBebidas(bebidas);
                         modelo.miRestaurante.setPostres(postres);
                     }
-
-                    //Mensajes que se mostrarán al usuario
-                    String nomComida = "Nombre de la comida: "; 
-                    String preComida = "Precio de la comida: ";
-                    String ingComida = "Ingredientes de la comida: ";
-                    String nomBebida = "Nombre de la bebida: ";
-                    String preBebida = "Precio de la bebida: ";
-                    String nomPostre = "Nombre del postre: ";
-                    String prePostre = "Precio del postre: ";
-                    String ingPostre = "Ingredientes del postre: ";
                     
                     //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                     modelo.regComida = new Comida();
@@ -133,24 +115,19 @@ public class Controlador{
                     modelo.regPostre = new Postre();
                     //Pedimos datos del platillo
                     //Datos de comida
-                    modelo.regComida.setNombre(validString(JOptionPane.showInputDialog(nomComida), nomComida));
-                    modelo.regComida.setPrecio(validFloat(JOptionPane.showInputDialog(preComida), preComida));
-                    modelo.regComida.setIngredientes(validString(JOptionPane.showInputDialog(ingComida), ingComida));
+                    modelo.regComida.setNombre(validString(JOptionPane.showInputDialog(modelo.nomComida), modelo.nomComida));
+                    modelo.regComida.setPrecio(validFloat(JOptionPane.showInputDialog(modelo.preComida), modelo.preComida));
+                    modelo.regComida.setIngredientes(validString(JOptionPane.showInputDialog(modelo.ingComida), modelo.ingComida));
                     
                     //Datos de la bebida
-                    modelo.regBebida.setNombre(validString(JOptionPane.showInputDialog(nomBebida), nomBebida));
-                    modelo.regBebida.setPrecio(validFloat(JOptionPane.showInputDialog(preBebida), preBebida));
+                    modelo.regBebida.setNombre(validString(JOptionPane.showInputDialog(modelo.nomBebida), modelo.nomBebida));
+                    modelo.regBebida.setPrecio(validFloat(JOptionPane.showInputDialog(modelo.preBebida), modelo.preBebida));
                     
                     //Datos del postre
-                    modelo.regPostre.setNombre(validString(JOptionPane.showInputDialog(nomPostre), nomPostre));
-                    modelo.regPostre.setPrecio(validFloat(JOptionPane.showInputDialog(prePostre), prePostre));
-                    modelo.regPostre.setIngredientes(validString(JOptionPane.showInputDialog(ingPostre), ingPostre));
-                    
-                    //Agregamos la comida, la bebida y el platillo a los ListArray
-                    //modelo.miRestaurante.getComidas().add(modelo.regComida);
-                    //modelo.miRestaurante.getBebidas().add(modelo.regBebida);
-                    //modelo.miRestaurante.getPostres().add(modelo.regPostre);
-                    
+                    modelo.regPostre.setNombre(validString(JOptionPane.showInputDialog(modelo.nomPostre), modelo.nomPostre));
+                    modelo.regPostre.setPrecio(validFloat(JOptionPane.showInputDialog(modelo.prePostre), modelo.prePostre));
+                    modelo.regPostre.setIngredientes(validString(JOptionPane.showInputDialog(modelo.ingPostre), modelo.ingPostre));
+
                     try {
                         modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
                         JOptionPane.showMessageDialog(null, "El platillo se ha guardado correctamente.");
@@ -246,7 +223,7 @@ public class Controlador{
         return false;
     }
 
-    //Metodo recursivo para validar que la entrada de texto no sea nula
+    //Metodos recursivos para validar que la entrada de texto no sea nula o incongruente al que se pide
     //Primer parametro es el texto a validar, el segundo parametro es el mensaje para pedir un dato valido
     private String validString(String validacion, String mensajeVal) {
         if (!"".equals(validacion)) {
