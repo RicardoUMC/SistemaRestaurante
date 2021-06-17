@@ -64,6 +64,33 @@ public class Controlador{
 
                 //Si no se han registrado los datos del Restaurante, no podemos crear platillos
                 if (existeRestaurante()){
+                                        //registra cliente
+                                        if (modelo.miRestaurante.getCliente() == null){
+                                            ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+                                            modelo.miRestaurante.setCliente(clientes);
+                                        }
+                    
+                                        //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
+                                        modelo.regCliente = new Cliente();
+                                        //Pedimos datos del repartidor
+                                        modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(modelo.nomRep), modelo.nomRep));
+                                        modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(modelo.apeRep), modelo.apeRep));
+                                        modelo.regRepartidor.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.edRep), modelo.edRep), modelo.edRep));
+                                        //Se valida solamente F o M
+                                        String[] options = {"F", "M"};
+                                        String n = (String) JOptionPane.showInputDialog(null, modelo.genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                                        modelo.regRepartidor.setGenero(n.charAt(0));
+                                        modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(modelo.noRep), modelo.noRep), modelo.noRep));
+                                        modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(modelo.transRep), modelo.transRep));
+                                        modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(modelo.calRep), modelo.calRep), modelo.calRep), modelo.calRep));
+                    
+                                        try {
+                                            modelo.guardarRepartidor(modelo.regRepartidor);
+                                            JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
+                                        } catch (NullPointerException nullPointer) {
+                                            JOptionPane.showMessageDialog(null, "No se pudo completar.");
+                                        }
+                                       
                     if (modelo.platillos()) {
 
                         String comidas [][] = obtenerComidas();
