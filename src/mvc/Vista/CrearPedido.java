@@ -58,7 +58,7 @@ public class CrearPedido extends JFrame{
         tituloApp = new JLabel("<html><span style='color: teal;'>Pedidos</span></html>");
     }
     
-    public void mostrar (String[][] comidas, String[][] bebidas, String[][] postres, String[][] Repartidor){
+    public void mostrar(String[][] comidas, String[][] bebidas, String[][] postres, String[][] Repartidor){
         
         setTitle("Pedidos");
         
