@@ -5,9 +5,9 @@ public class Cliente extends Persona {
     protected String direccion;
     protected int numeroTelefono;
 
-    Cliente() {}
+    public Cliente() {}
 
-    Cliente(String nombre, String apellido, int edad, char genero) {
+    public Cliente(String nombre, String apellido, int edad, char genero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
