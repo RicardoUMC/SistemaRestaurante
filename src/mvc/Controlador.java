@@ -61,6 +61,27 @@ public class Controlador{
             //Realizar Pedido
             else if(menuPrincipal.btnPedido == e.getSource()) {
 
+                //Si no se han registrado los datos del Restaurante, no podemos crear platillos
+                if (existeRestaurante()){
+                    if (modelo.platillos()) {
+
+                        String comidas [][] = obtenerComidas();
+                        String bebidas [][] = obtenerBebidas();
+                        String postres [][] = obtenerPostres();
+                        
+                        //Le pasamos esta información a la ventana que muestra el menú del día
+                        menuDelDia.mostrar(comidas, bebidas, postres);
+                        
+                        return;
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(null, "Aún no se registran platillos.");
+                        return;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
+            
+            
                 String comidas [][] = obtenerComidas();
                 String bebidas [][] = obtenerBebidas();
                 String postres [][] = obtenerPostres();
