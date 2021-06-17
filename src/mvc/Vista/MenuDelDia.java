@@ -6,11 +6,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
-import java.awt.GridBagConstraints;
+import java.awt.GridLayout;
+import java.awt.event.WindowListener;
 import java.awt.BorderLayout;
-import java.awt.GridBagLayout;
 import java.awt.FlowLayout;
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 
 public class MenuDelDia extends JFrame{
     
@@ -42,10 +45,7 @@ public class MenuDelDia extends JFrame{
         modeloPostres.addColumn("Nombre");
         modeloPostres.addColumn("Precio");  
 
-        panelCentro.setLayout(new GridBagLayout());
-        panelIzquierdo.setLayout(new GridBagLayout());
         panelNorte.setLayout(new FlowLayout());
-        panelDerecho.setLayout(new GridBagLayout());
 
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         tituloApp = new JLabel("<html><span style='color: teal;'>MENÚ DEL DÍA</span></html>");
@@ -55,10 +55,7 @@ public class MenuDelDia extends JFrame{
         
         setTitle("Menú del día");
         
-        GridBagConstraints c = new GridBagConstraints();
-        c.gridwidth = 1;
-        c.weightx = 1;
-        c.weighty = 1;
+
 
         //añadimos títlo
 
@@ -74,12 +71,9 @@ public class MenuDelDia extends JFrame{
         tablaComidas.setModel(modeloComidas); 
         modeloComidas.fireTableDataChanged();
         titulo = new JLabel("<html><span style='color: teal;'>Comida</span></html>");
-        c.gridx = 0;
-        c.gridy = 0;
-        panelIzquierdo.add(titulo, c);
-        c.gridx = 0;
-        c.gridy = 2;   
-        panelIzquierdo.add(new JScrollPane(tablaComidas), c);
+ 
+        tablaComidas.setFillsViewportHeight(true);
+        panelIzquierdo.add(new JScrollPane(tablaComidas));
 
         
         //Añadimos sección de Bebida
@@ -88,12 +82,9 @@ public class MenuDelDia extends JFrame{
         tablaBebidas.setModel(modeloBebidas); 
         modeloBebidas.fireTableDataChanged();
         titulo = new JLabel("<html><span style='color: teal;'>Bebidas</span></html>");
-        c.gridx = 0;
-        c.gridy = 0;
-        panelCentro.add(titulo, c);
-        c.gridx = 0;
-        c.gridy = 2;   
-        panelCentro.add(new JScrollPane(tablaBebidas), c);
+  
+        tablaBebidas.setFillsViewportHeight(true);
+        panelCentro.add(new JScrollPane(tablaBebidas));
         
         //Añadimos sección de Postre
         //Creamos tabla Postre
@@ -101,25 +92,31 @@ public class MenuDelDia extends JFrame{
         tablaPostres.setModel(modeloPostres); 
         modeloPostres.fireTableDataChanged();   
         titulo = new JLabel("<html><span style='color: teal;'>Postres</span></html>");
-        c.gridx = 0;
-        c.gridy = 0;
-        panelDerecho.add(titulo, c);
-        c.gridx = 0;
-        c.gridy = 2;   
-        panelDerecho.add(new JScrollPane(tablaPostres), c);
+
+        tablaPostres.setFillsViewportHeight(true);
+        panelDerecho.add(new JScrollPane(tablaPostres));
 
 
         //Añadimos los paneles a la ventana
         getContentPane().setLayout(new BorderLayout());
         add(panelNorte, BorderLayout.NORTH);
-        add(panelIzquierdo, BorderLayout.LINE_START);
-        add(panelCentro, BorderLayout.CENTER);
-        add(panelDerecho, BorderLayout.LINE_END);
+        add(new JScrollPane(tablaComidas), BorderLayout.LINE_START);
+        add(new JScrollPane(tablaBebidas), BorderLayout.CENTER);
+        add(new JScrollPane(tablaPostres), BorderLayout.LINE_END);
 
         setSize(800, 500);
 		setLocation(500, 500);
 		setVisible(true);
         pack();
+
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.out.println("WindowClosingDemo.windowClosing");
+                getContentPane().removeAll();
+                repaint();
+            }
+        });
     }
 
     //Llena a tabla a partir de la información que el controlador nos da
@@ -133,9 +130,9 @@ public class MenuDelDia extends JFrame{
             fila[1] = data[i][1] + "0";
             modelo.addRow(fila);  
         }
-
-        return modelo;
-        
+        return modelo;       
     }
+
+
 
 }

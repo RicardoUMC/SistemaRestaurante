@@ -14,5 +14,4 @@ public class SistemaRestaurante {
         Controlador controlador = new Controlador(modelo, vista);
         controlador.iniciarVista();
     }
-
 }
