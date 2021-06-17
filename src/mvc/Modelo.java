@@ -8,6 +8,7 @@ public class Modelo {
     public Bebida regBebida;
     public Postre regPostre;
     public Repartidor regRepartidor;
+    public Cliente regCliente;
 
     public Pedido pedido;
 
@@ -29,6 +30,16 @@ public class Modelo {
     String noRep = "Asigne un numero de repartidor: ";
     String transRep = "Medio de transporte: ";
     String calRep = "Calificacion del repartidor (1 - 5): ";
+
+    
+    // Mensajes que se mostrarán al usuario al ingresar sus datos
+    String nomCli = "Nombre del Cliente: ";
+    String apeCli = "Apellido del Cliente: ";
+    String DirCli = "Direccion del Cliente: ";
+    String TelCli = "Asigne un numero de Cliente::";
+    String EdCli  = "Edad del Cliente: ";
+    String GenCli = "Género del Cliente (F o M): ";
+ 
 
     public boolean platillos(){
         if (miRestaurante.getBebidas() != null && miRestaurante.getComidas() != null && miRestaurante.getPostres() != null) {
