@@ -36,7 +36,7 @@ public class Modelo {
     String nomCli = "Nombre del Cliente: ";
     String apeCli = "Apellido del Cliente: ";
     String DirCli = "Direccion del Cliente: ";
-    String TelCli = "Asigne un numero de Cliente::";
+    String TelCli = "Numero del Cliente::";
     String EdCli  = "Edad del Cliente: ";
     String GenCli = "Género del Cliente (F o M): ";
  
