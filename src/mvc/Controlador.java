@@ -187,6 +187,7 @@ public class Controlador{
                     modelo.regPostre.setPrecio(validFloat(JOptionPane.showInputDialog(modelo.prePostre), modelo.prePostre));
                     modelo.regPostre.setIngredientes(validString(JOptionPane.showInputDialog(modelo.ingPostre), modelo.ingPostre));
 
+
                     try {
                         modelo.guardarPlatillo(modelo.regComida, modelo.regBebida, modelo.regPostre);
                         JOptionPane.showMessageDialog(null, "El platillo se ha guardado correctamente.");

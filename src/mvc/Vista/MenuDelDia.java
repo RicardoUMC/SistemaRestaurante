@@ -15,7 +15,7 @@ import java.awt.FlowLayout;
 public class MenuDelDia extends JFrame{
     
     // public DefaultTableModel modelo = new DefaultTableModel();
-    String [] columnas = {"Nombre", "Precio"};
+    String [] columnas = {"Nombre", "Precio ($)"};
     
     public JTable tablaComidas = new JTable();
     public JTable tablaBebidas = new JTable();
@@ -130,7 +130,7 @@ public class MenuDelDia extends JFrame{
         
         for(int i = 0; i < data.length; i++){
             fila[0] = data[i][0];
-            fila[1] = data[i][1];
+            fila[1] = data[i][1] + "0";
             modelo.addRow(fila);  
         }
 

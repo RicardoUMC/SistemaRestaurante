@@ -153,7 +153,7 @@ public class CrearPedido extends JFrame{
             System.out.println(data[i][0]);
             System.out.println(data[i][1]);
             fila[0] = data[i][0];
-            fila[1] = data[i][1];
+            fila[1] = data[i][1] + "0";
             modelo.addRow(fila);  
         }
         
