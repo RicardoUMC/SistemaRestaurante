@@ -72,21 +72,21 @@ public class Controlador{
                     
                                         //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                                         modelo.regCliente = new Cliente();
-                                        //Pedimos datos del repartidor
-                                        modelo.regRepartidor.setNombre(validString(JOptionPane.showInputDialog(modelo.nomRep), modelo.nomRep));
-                                        modelo.regRepartidor.setApellido(validString(JOptionPane.showInputDialog(modelo.apeRep), modelo.apeRep));
-                                        modelo.regRepartidor.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.edRep), modelo.edRep), modelo.edRep));
+                                        //Pedimos datos del Cliente
+                                        modelo.regCliente.setNombre(validString(JOptionPane.showInputDialog(modelo.nomCli), modelo.nomCli));
+                                        modelo.regCliente.setApellido(validString(JOptionPane.showInputDialog(modelo.apeCli), modelo.apeCli));
+                                        modelo.regCliente.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.EdCli), modelo.EdCli), modelo.EdCli));
                                         //Se valida solamente F o M
                                         String[] options = {"F", "M"};
                                         String n = (String) JOptionPane.showInputDialog(null, modelo.genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                                        modelo.regRepartidor.setGenero(n.charAt(0));
-                                        modelo.regRepartidor.setRepartidorNo(validInt(validString(JOptionPane.showInputDialog(modelo.noRep), modelo.noRep), modelo.noRep));
-                                        modelo.regRepartidor.setMedioTransporte(validString(JOptionPane.showInputDialog(modelo.transRep), modelo.transRep));
-                                        modelo.regRepartidor.setCalificacion(validRango(validFloat(validString(JOptionPane.showInputDialog(modelo.calRep), modelo.calRep), modelo.calRep), modelo.calRep));
+                                        modelo.regCliente.setGenero(n.charAt(0));
+                                        modelo.regCliente.setNumTel(validInt(validString(JOptionPane.showInputDialog(modelo.TelCli), modelo.TelCli), modelo.TelCli));
+                                        modelo.regCliente.setDireccion(validString(JOptionPane.showInputDialog(modelo.DirCli), modelo.DirCli));
+                                        
                     
                                         try {
-                                            modelo.guardarRepartidor(modelo.regRepartidor);
-                                            JOptionPane.showMessageDialog(null, "El repartidor se ha guardado correctamente.");
+                                            modelo.guardarCliente(modelo.regCliente);
+                                            JOptionPane.showMessageDialog(null, "LOs datos del cliente se han guardado correctamente.");
                                         } catch (NullPointerException nullPointer) {
                                             JOptionPane.showMessageDialog(null, "No se pudo completar.");
                                         }
