@@ -11,6 +11,7 @@ public class Restaurante implements IReceta {
     protected ArrayList <Bebida> bebidas;
     protected ArrayList <Postre> postres;
     protected ArrayList <Pedido> pedido;
+    protected ArrayList <Cliente> clientes;
     protected ArrayList <Repartidor> repartidores;
 
     public Restaurante() {
@@ -55,6 +56,10 @@ public class Restaurante implements IReceta {
         repartidores.add(r);
     }
 
+    public void agregarCliente (Cliente r){
+        clientes.add(r);
+    }
+
     public void agregarPlatillo (Comida c, Bebida b, Postre p){
         comidas.add(c);
         bebidas.add(b);
@@ -94,11 +99,11 @@ public class Restaurante implements IReceta {
     }
 
     public ArrayList<Cliente> getCliente() {
-        return cliente;
+        return clientes;
     }
 
-    public void setCliente(ArrayList<Cliente> cliente) {
-        this.cliente = cliente;
+    public void setCliente(ArrayList<Cliente> clientes) {
+        this.clientes = clientes;
     }
 
     //---------NO BORRAR---------//
