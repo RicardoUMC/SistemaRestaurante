@@ -120,7 +120,7 @@ public class Controlador{
                         return;
                     }
                 }
-                JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
+                JOptionPane.showMessageDialog(null, "No se puede realizar un pedido sin antes registrar los datos del restaurante.");
             
                 //realizarPedido
             }
