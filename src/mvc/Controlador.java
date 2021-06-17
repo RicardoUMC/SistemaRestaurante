@@ -13,12 +13,14 @@ public class Controlador{
     Vista vista;
     MenuPrincipal menuPrincipal;
     MenuDelDia menuDelDia;
+    CrearPedido crearPedido;
 
     public Controlador(Modelo m, Vista v) {
         modelo = m;
         vista = v;
         menuPrincipal = v.menuPrincipal;
         menuDelDia = v.menuDelDia;
+        crearPedido = v.crearPedido;
     }
 
     public void iniciarVista(){
@@ -52,6 +54,11 @@ public class Controlador{
             }
             //Realizar Pedido
             else if(menuPrincipal.btnPedido == e.getSource()) {
+
+                String comidas [][] = obtenerComidas();
+                String bebidas [][] = obtenerBebidas();
+                String postres [][] = obtenerPostres();
+                //String repartidor[][] = obtenerRepartidor();
                 //realizarPedido
             }
             //Registrar repartidores
