@@ -150,8 +150,6 @@ public class CrearPedido extends JFrame{
         Object [] fila = new Object[2];
         
         for(int i = 0; i < data.length; i++){
-            System.out.println(data[i][0]);
-            System.out.println(data[i][1]);
             fila[0] = data[i][0];
             fila[1] = data[i][1];
             modelo.addRow(fila);  
