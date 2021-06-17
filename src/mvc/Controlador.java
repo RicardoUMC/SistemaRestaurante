@@ -240,22 +240,22 @@ public class Controlador{
     }
 
     private String [][] obtenerRepartidores(){
-        //Contamos las postres que hay registradas
+        //Contamos las Repartidores que hay registradas
         int cantidadRepartidor = modelo.miRestaurante.getRepartidores().size();
 
         //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
-        String postres [][] = new String[cantidadRepartidor][cantidadRepartidor + 1];
+        String Repartidores [][] = new String[cantidadRepartidor][cantidadRepartidor + 1];
 
-        //Extraemos las postres que hay registradas
+        //Extraemos las Repartidores que hay registradas
         for (int i = 0; i < cantidadRepartidor; i++) {
             
-            if(i < postres.length){
-                postres [i][0] = modelo.miRestaurante.getRepartidores().get(i).getNombre();
-                postres [i][1] = String.valueOf(modelo.miRestaurante.getRepartidores().get(i).getNombre());
+            if(i < Repartidores.length){
+                Repartidores [i][0] = modelo.miRestaurante.getRepartidores().get(i).getNombre();
+                Repartidores [i][1] = String.valueOf(modelo.miRestaurante.getRepartidores().get(i).getRepartidorNo());
             }
         }
 
-        return postres;
+        return Repartidores;
     }
 
     private boolean existeRestaurante(){
