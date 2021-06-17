@@ -64,42 +64,50 @@ public class Controlador{
 
                 //Si no se han registrado los datos del Restaurante, no podemos crear platillos
                 if (existeRestaurante()){
-                                        //registra cliente
-                                        if (modelo.miRestaurante.getCliente() == null){
-                                            ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-                                            modelo.miRestaurante.setCliente(clientes);
-                                        }
                     
-                                        //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
-                                        modelo.regCliente = new Cliente();
-                                        //Pedimos datos del Cliente
-                                        modelo.regCliente.setNombre(validString(JOptionPane.showInputDialog(modelo.nomCli), modelo.nomCli));
-                                        modelo.regCliente.setApellido(validString(JOptionPane.showInputDialog(modelo.apeCli), modelo.apeCli));
-                                        modelo.regCliente.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.EdCli), modelo.EdCli), modelo.EdCli));
-                                        //Se valida solamente F o M
-                                        String[] options = {"F", "M"};
-                                        String n = (String) JOptionPane.showInputDialog(null, modelo.genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-                                        modelo.regCliente.setGenero(n.charAt(0));
-                                        modelo.regCliente.setNumTel(validInt(validString(JOptionPane.showInputDialog(modelo.TelCli), modelo.TelCli), modelo.TelCli));
-                                        modelo.regCliente.setDireccion(validString(JOptionPane.showInputDialog(modelo.DirCli), modelo.DirCli));
-                                        
-                    
-                                        try {
-                                            modelo.guardarCliente(modelo.regCliente);
-                                            JOptionPane.showMessageDialog(null, "LOs datos del cliente se han guardado correctamente.");
-                                        } catch (NullPointerException nullPointer) {
-                                            JOptionPane.showMessageDialog(null, "No se pudo completar.");
-                                        }
-                                       
                     if (modelo.platillos()) {
+                        //------------LO QUE AGREGO------------//
+                        //Si no hay repartidores no habrá quien entregue el pedido, por eso lo validamos primero
+                        try {
+                            String repartidores [][] = obtenerRepartidores();
+                            
+                            String comidas [][] = obtenerComidas();
+                            String bebidas [][] = obtenerBebidas();
+                            String postres [][] = obtenerPostres();
+                                
+                            //Le pasamos esta información a la ventana que muestra el menú del día
+                            crearPedido.mostrar(comidas, bebidas, postres, repartidores);
 
-                        String comidas [][] = obtenerComidas();
-                        String bebidas [][] = obtenerBebidas();
-                        String postres [][] = obtenerPostres();
-                        String repartidores [][] = obtenerRepartidores();
-                        //Le pasamos esta información a la ventana que muestra el menú del día
-                        crearPedido.mostrar(comidas, bebidas, postres, repartidores);
+                        } catch (Exception a) {
+                            JOptionPane.showMessageDialog(null, "No tenemos repartidores disponibles para tu solicitud.");
+                            return;
+                        }
                         
+                        //Se registra al primer cliente
+                        if (modelo.miRestaurante.getCliente() == null){
+                            ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+                            modelo.miRestaurante.setCliente(clientes);
+                        }
+    
+                        //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
+                        modelo.regCliente = new Cliente();
+                        //Pedimos datos del Cliente
+                        modelo.regCliente.setNombre(validString(JOptionPane.showInputDialog(modelo.nomCli), modelo.nomCli));
+                        modelo.regCliente.setApellido(validString(JOptionPane.showInputDialog(modelo.apeCli), modelo.apeCli));
+                        modelo.regCliente.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.EdCli), modelo.EdCli), modelo.EdCli));
+                        //Se valida solamente F o M
+                        String[] options = {"F", "M"};
+                        String n = (String) JOptionPane.showInputDialog(null, modelo.genRep, null, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+                        modelo.regCliente.setGenero(n.charAt(0));
+                        modelo.regCliente.setNumTel(validInt(validString(JOptionPane.showInputDialog(modelo.TelCli), modelo.TelCli), modelo.TelCli));
+                        modelo.regCliente.setDireccion(validString(JOptionPane.showInputDialog(modelo.DirCli), modelo.DirCli));
+                        
+                        try {
+                            modelo.guardarCliente(modelo.regCliente);
+                            JOptionPane.showMessageDialog(null, "Los datos del cliente se han guardado correctamente.");
+                        } catch (NullPointerException nullPointer) {
+                            JOptionPane.showMessageDialog(null, "No se pudo completar.");
+                        }
                         return;
                     }
                     else {
