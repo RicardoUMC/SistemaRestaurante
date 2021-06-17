@@ -11,9 +11,6 @@ public class Controlador{
     
     Modelo modelo;
     Vista vista;
-    MenuPrincipal menuPrincipal;
-    MenuDelDia menuDelDia;
-    CrearPedido crearPedido;
 
     public Controlador(Modelo m, Vista v) {
         modelo = m;
@@ -68,9 +65,9 @@ public class Controlador{
                         String comidas [][] = obtenerComidas();
                         String bebidas [][] = obtenerBebidas();
                         String postres [][] = obtenerPostres();
-                        
+                        String repartidores [][] = obtenerRepartidores();
                         //Le pasamos esta información a la ventana que muestra el menú del día
-                        menuDelDia.mostrar(comidas, bebidas, postres);
+                        crearPedido.mostrar(comidas, bebidas, postres);
                         
                         return;
                     }
@@ -243,6 +240,24 @@ public class Controlador{
         return postres;
     }
 
+    private String [][] obtenerRepartidor(){
+        //Contamos las postres que hay registradas
+        int cantidadRepartidor = modelo.miRestaurante.getRepartidores().size();
+
+        //Creamos el arreglo para posteriormente pasarlo a la tabla del menú
+        String postres [][] = new String[cantidadRepartidor][cantidadRepartidor + 1];
+
+        //Extraemos las postres que hay registradas
+        for (int i = 0; i < cantidadRepartidor; i++) {
+            
+            if(i < postres.length){
+                postres [i][0] = modelo.miRestaurante.getRepartidores().get(i).getNombre();
+                postres [i][1] = String.valueOf(modelo.miRestaurante.getRepartidores().get(i).getNombre());
+            }
+        }
+
+        return postres;
+    }
 
     private boolean existeRestaurante(){
         if(modelo.miRestaurante != null){
