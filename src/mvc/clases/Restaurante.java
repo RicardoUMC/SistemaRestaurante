@@ -15,18 +15,11 @@ public class Restaurante implements IReceta {
 
     public Restaurante() {
         this.pedido = new ArrayList<Pedido>();
-        this.repartidores = new ArrayList<Repartidor>();
-        this.comidas = new ArrayList<>();
-        this.bebidas = new ArrayList<>();
-        this.postres = new ArrayList<>();
+
     }
     
     public Restaurante(String nombre, String ubicacion, String telefono) {
         this.pedido = new ArrayList<Pedido>();
-        this.repartidores = new ArrayList<Repartidor>();
-        this.comidas = new ArrayList<>();
-        this.bebidas = new ArrayList<>();
-        this.postres = new ArrayList<>();
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.telefono = telefono;
@@ -99,4 +92,13 @@ public class Restaurante implements IReceta {
     public void setRepartidores(ArrayList<Repartidor> repartidores) {
         this.repartidores = repartidores;
     }
+
+    public ArrayList<Pedido> getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(ArrayList<Pedido> pedido) {
+        this.pedido = pedido;
+    }
+
 }
