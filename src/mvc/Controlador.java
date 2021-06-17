@@ -11,13 +11,17 @@ public class Controlador{
     
     Modelo modelo;
     Vista vista;
-
+    MenuPrincipal menuPrincipal;
+    MenuDelDia menuDelDia;
+    CrearPedido crearPedido;
+   
     public Controlador(Modelo m, Vista v) {
         modelo = m;
         vista = v;
         menuPrincipal = v.menuPrincipal;
         menuDelDia = v.menuDelDia;
         crearPedido = v.crearPedido;
+        
     }
 
     public void iniciarVista(){
@@ -67,7 +71,7 @@ public class Controlador{
                         String postres [][] = obtenerPostres();
                         String repartidores [][] = obtenerRepartidores();
                         //Le pasamos esta información a la ventana que muestra el menú del día
-                        crearPedido.mostrar(comidas, bebidas, postres);
+                        crearPedido.mostrar(comidas, bebidas, postres, repartidores);
                         
                         return;
                     }
@@ -78,11 +82,6 @@ public class Controlador{
                 }
                 JOptionPane.showMessageDialog(null, "No puede ver el menú sin antes registrar los datos del restaurante.");
             
-            
-                String comidas [][] = obtenerComidas();
-                String bebidas [][] = obtenerBebidas();
-                String postres [][] = obtenerPostres();
-                //String repartidor[][] = obtenerRepartidor();
                 //realizarPedido
             }
             //Registrar repartidores
@@ -240,7 +239,7 @@ public class Controlador{
         return postres;
     }
 
-    private String [][] obtenerRepartidor(){
+    private String [][] obtenerRepartidores(){
         //Contamos las postres que hay registradas
         int cantidadRepartidor = modelo.miRestaurante.getRepartidores().size();
 
