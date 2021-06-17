@@ -67,17 +67,15 @@ public class Controlador{
                     
                     if (modelo.platillos()) {
                         //------------LO QUE AGREGO------------//
+                        String repartidores[][];
+                        String comidas[][];
+                        String bebidas[][];
+                        String postres[][];
+                        
                         //Si no hay repartidores no habrá quien entregue el pedido, por eso lo validamos primero
                         try {
-                            String repartidores [][] = obtenerRepartidores();
+                            repartidores = obtenerRepartidores();
                             
-                            String comidas [][] = obtenerComidas();
-                            String bebidas [][] = obtenerBebidas();
-                            String postres [][] = obtenerPostres();
-                                
-                            //Le pasamos esta información a la ventana que muestra el menú del día
-                            crearPedido.mostrar(comidas, bebidas, postres, repartidores);
-
                         } catch (Exception a) {
                             JOptionPane.showMessageDialog(null, "No tenemos repartidores disponibles para tu solicitud.");
                             return;
@@ -88,7 +86,7 @@ public class Controlador{
                             ArrayList<Cliente> clientes = new ArrayList<Cliente>();
                             modelo.miRestaurante.setCliente(clientes);
                         }
-    
+                        
                         //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                         modelo.regCliente = new Cliente();
                         //Pedimos datos del Cliente
@@ -108,6 +106,13 @@ public class Controlador{
                         } catch (NullPointerException nullPointer) {
                             JOptionPane.showMessageDialog(null, "No se pudo completar.");
                         }
+                        
+                        comidas = obtenerComidas();
+                        bebidas = obtenerBebidas();
+                        postres = obtenerPostres();
+                            
+                        //Le pasamos esta información a la ventana que muestra el menú del día
+                        crearPedido.mostrar(comidas, bebidas, postres, repartidores);
                         return;
                     }
                     else {
