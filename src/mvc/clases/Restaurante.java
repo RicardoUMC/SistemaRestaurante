@@ -72,15 +72,31 @@ public class Restaurante implements IReceta {
         return comidas;
     }
 
+    public void setComidas(ArrayList<Comida> comidas) {
+        this.comidas = comidas;
+    }
+
     public ArrayList<Bebida> getBebidas() {
         return bebidas;
+    }
+
+    public void setBebidas(ArrayList<Bebida> bebidas) {
+        this.bebidas = bebidas;
     }
 
     public ArrayList<Postre> getPostres() {
         return postres;
     }
 
+    public void setPostres(ArrayList<Postre> postres) {
+        this.postres = postres;
+    }
+
     public ArrayList<Repartidor> getRepartidores() {
         return repartidores;
+    }
+
+    public void setRepartidores(ArrayList<Repartidor> repartidores) {
+        this.repartidores = repartidores;
     }
 }
