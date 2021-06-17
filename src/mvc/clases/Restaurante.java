@@ -93,6 +93,14 @@ public class Restaurante implements IReceta {
         this.repartidores = repartidores;
     }
 
+    public ArrayList<Cliente> getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ArrayList<Cliente> cliente) {
+        this.cliente = cliente;
+    }
+
     //---------NO BORRAR---------//
     public ArrayList<Pedido> getPedido() {
         return pedido;
