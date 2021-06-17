@@ -201,7 +201,7 @@ public class Controlador{
                     }
                     return;
                 }
-                JOptionPane.showMessageDialog(null, "No puede crear un repartidor sin antes registrar los datos del restaurante.");                
+                JOptionPane.showMessageDialog(null, "No puede crear un platillo sin antes registrar los datos del restaurante.");                
             }
             //Registrar restaurante
             else if(menuPrincipal.btnRegRestaurante == e.getSource()) {
