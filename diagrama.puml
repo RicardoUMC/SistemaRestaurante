@@ -11,39 +11,98 @@ Velázquez Hernández Aldo
 end note
 
 class Restaurante {
+    - nombre: String
+    - ubicacion: String 
+    - telefono: String 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+    - pedido: ArrayList <Pedido> 
+    + repartidores ArrayList <Repartidor> 
+
+    + Restaurante()
+    + Restaurante(nombre : String, ubicacion : String, telefono : String) 
+    + setNombre(nombre : String) : void
+    + setUbicacion(ubicacion : String) : void
+    + setTelefono(telefono : String) : void
+    + getNombre() : String
+    + getUbicacion() : String
+    + getTelefono() : String
+    + getRepartidores() : ArrayList <Repartidor>
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + agregaRepartidor()
+    + agregarPlatillo()
 
 }
 
 class Pedido {
+    - Repartidor: Repartido
+    - idRepartidor: int 
+    - cliente: Cliente 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+
+    + Pedido()
+    + Pedido(cliente: Cliente)
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + asignarRepartidor(int: idRepartidor) : void
+    + agregarPlatillo(comida : Comida, bebida : Bebida, postre : Postre)
 
 }
 
 interface IReceta {
-
+    + setNombre(nombre : String) : void
+    + setPrecio(precio : float) : void
+    + setIngredientes(ingredientes : String) : void
+    + getNombre() : String
+    + getPrecio() : String
+    + getIngredientes() : String
 }
 
 class Comida {
-
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
 }
 
 class Bebida {
-    
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
 }
 
 class Postre {
-    
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
 }
 
 Abstract Persona {
-
+    + Persona()
+    + Persona(nombre: String, apellido : String, edad : int, genero : char)
+    + setNombre(nombre : String) : void
+    + setApellido(apellido : float) : void
+    + setEdad(edad : String) : void
+    + setGenero(genero : char) : void
+    + getNombre() : String
+    + getApellido() : String
+    + getEdad() : String
+    + getGenero() : char
 }
 
 class Cliente {
-
+    - direccion : String 
+    - numeroTelefono : int 
 }
 
 class Repartidor {
-
+    - noRepartidor : String 
+    - medioTranspore : String 
 }
 
 Persona <|-r- Cliente

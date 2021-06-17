@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="889px" preserveAspectRatio="none" style="width:1098px;height:889px;background:#777777;" version="1.1" viewBox="0 0 1098 889" width="1098px" zoomAndPan="magnify"><defs><filter height="300%" id="f10u7pj4itjxs1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><path d="M886.5,148.5 L886.5,211.9746 L1089.5,211.9746 L1089.5,158.5 L1079.5,148.5 L886.5,148.5 " fill="#FF4500" filter="url(#f10u7pj4itjxs1)" style="stroke:#002642;stroke-width:1.0;"/><path d="M1079.5,148.5 L1079.5,158.5 L1089.5,158.5 L1079.5,148.5 " fill="#FF4500" style="stroke:#002642;stroke-width:1.0;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="178" x="892.5" y="164.5591">Ávila Sánchez Aldrich Jonathan</text><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="182" x="892.5" y="177.9277">González Oloarte Diego Enrique</text><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="156" x="892.5" y="191.2964">Mora Campos Ricardo Uriel</text><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="152" x="892.5" y="204.665">Velázquez Hernández Aldo</text><!--MD5=[fe9b79eeb773063b60029e9ad14aea1e]
+class Restaurante--><rect codeLine="12" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="346.3906" id="Restaurante" style="stroke:#1B1B1B;stroke-width:1.5;" width="334" x="228" y="7"/><ellipse cx="357" cy="20" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M357.6406,24.1563 Q356.75,24.1563 355.9922,23.8906 Q355.2344,23.625 354.6875,23.1094 Q354.1563,22.5938 353.8516,21.8125 Q353.5469,21.0313 353.5469,20.0156 Q353.5469,19.0625 353.8359,18.2891 Q354.125,17.5156 354.6719,16.9531 Q355.1875,16.4219 355.9609,16.1328 Q356.7344,15.8438 357.6406,15.8438 Q358.1406,15.8438 358.5469,15.8984 Q358.9531,15.9531 359.2969,16.0469 Q359.6563,16.1563 359.9531,16.2813 Q360.25,16.4063 360.4688,16.5156 L360.4688,18.4531 L360.2344,18.4531 Q360.0781,18.3281 359.8516,18.1484 Q359.625,17.9688 359.3281,17.7969 Q359.0313,17.625 358.6875,17.5078 Q358.3438,17.3906 357.9531,17.3906 Q357.5156,17.3906 357.125,17.5234 Q356.7344,17.6563 356.4063,17.9844 Q356.0938,18.2813 355.8984,18.7891 Q355.7031,19.2969 355.7031,20.0156 Q355.7031,20.7656 355.9141,21.2734 Q356.125,21.7813 356.4375,22.0625 Q356.7656,22.3594 357.1719,22.4844 Q357.5781,22.6094 357.9688,22.6094 Q358.3438,22.6094 358.7109,22.5 Q359.0781,22.3906 359.3906,22.1875 Q359.6563,22.0469 359.8828,21.8672 Q360.1094,21.6875 360.25,21.5625 L360.4688,21.5625 L360.4688,23.4688 Q360.1719,23.6094 359.8984,23.7266 Q359.625,23.8438 359.3125,23.9219 Q358.9219,24.0313 358.5781,24.0938 Q358.2344,24.1563 357.6406,24.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="69" x="373" y="24.3748">Restaurante</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="229" x2="561" y1="33" y2="33"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="41"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="70" x="245" y="48.4189">nombre: String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="54.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="245" y="62.2549">ubicacion: String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="68.6719"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="245" y="76.0908">telefono: String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="82.5078"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="245" y="89.9268">comidas: ArrayList &lt;Comida&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="96.3438"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="245" y="103.7627">bebidas: ArrayList &lt;Bebida&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="110.1797"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="245" y="117.5986">postres: ArrayList &lt;Postre&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="236" y="124.0156"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="245" y="131.4346">pedido: ArrayList &lt;Pedido&gt;</text><ellipse cx="239" cy="140.8516" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="172" x="245" y="145.2705">repartidores ArrayList &lt;Repartidor&gt;</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="229" x2="561" y1="151.6875" y2="151.6875"/><ellipse cx="239" cy="162.6875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="245" y="167.1064">Restaurante()</text><ellipse cx="239" cy="176.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="311" x="245" y="180.9424">Restaurante(nombre : String, ubicacion : String, telefono : String)</text><ellipse cx="239" cy="190.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="245" y="194.7783">setNombre(nombre : String) : void</text><ellipse cx="239" cy="204.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="245" y="208.6143">setUbicacion(ubicacion : String) : void</text><ellipse cx="239" cy="218.0313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="245" y="222.4502">setTelefono(telefono : String) : void</text><ellipse cx="239" cy="231.8672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="245" y="236.2861">getNombre() : String</text><ellipse cx="239" cy="245.7031" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="245" y="250.1221">getUbicacion() : String</text><ellipse cx="239" cy="259.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="245" y="263.958">getTelefono() : String</text><ellipse cx="239" cy="273.375" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="245" y="277.7939">getRepartidores() : ArrayList &lt;Repartidor&gt;</text><ellipse cx="239" cy="287.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="168" x="245" y="291.6299">getComidas() : ArrayList &lt;Comida&gt;</text><ellipse cx="239" cy="301.0469" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="245" y="305.4658">getBebidas() : ArrayList &lt;Bebida&gt;</text><ellipse cx="239" cy="314.8828" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="245" y="319.3018">getPostres() : ArrayList &lt;Postre&gt;</text><ellipse cx="239" cy="328.7188" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="245" y="333.1377">agregaRepartidor()</text><ellipse cx="239" cy="342.5547" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="245" y="346.9736">agregarPlatillo()</text><!--MD5=[a26d7a8585b446db7fc8ab4626d8ca8a]
+class Pedido--><rect codeLine="39" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="221.8672" id="Pedido" style="stroke:#1B1B1B;stroke-width:1.5;" width="333" x="179.5" y="413"/><ellipse cx="323.5" cy="426" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M324.1406,430.1563 Q323.25,430.1563 322.4922,429.8906 Q321.7344,429.625 321.1875,429.1094 Q320.6563,428.5938 320.3516,427.8125 Q320.0469,427.0313 320.0469,426.0156 Q320.0469,425.0625 320.3359,424.2891 Q320.625,423.5156 321.1719,422.9531 Q321.6875,422.4219 322.4609,422.1328 Q323.2344,421.8438 324.1406,421.8438 Q324.6406,421.8438 325.0469,421.8984 Q325.4531,421.9531 325.7969,422.0469 Q326.1563,422.1563 326.4531,422.2813 Q326.75,422.4063 326.9688,422.5156 L326.9688,424.4531 L326.7344,424.4531 Q326.5781,424.3281 326.3516,424.1484 Q326.125,423.9688 325.8281,423.7969 Q325.5313,423.625 325.1875,423.5078 Q324.8438,423.3906 324.4531,423.3906 Q324.0156,423.3906 323.625,423.5234 Q323.2344,423.6563 322.9063,423.9844 Q322.5938,424.2813 322.3984,424.7891 Q322.2031,425.2969 322.2031,426.0156 Q322.2031,426.7656 322.4141,427.2734 Q322.625,427.7813 322.9375,428.0625 Q323.2656,428.3594 323.6719,428.4844 Q324.0781,428.6094 324.4688,428.6094 Q324.8438,428.6094 325.2109,428.5 Q325.5781,428.3906 325.8906,428.1875 Q326.1563,428.0469 326.3828,427.8672 Q326.6094,427.6875 326.75,427.5625 L326.9688,427.5625 L326.9688,429.4688 Q326.6719,429.6094 326.3984,429.7266 Q326.125,429.8438 325.8125,429.9219 Q325.4219,430.0313 325.0781,430.0938 Q324.7344,430.1563 324.1406,430.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="38" x="339.5" y="430.3748">Pedido</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="180.5" x2="511.5" y1="439" y2="439"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="447"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="196.5" y="454.4189">Repartidor: Repartido</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="460.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="196.5" y="468.2549">idRepartidor: int</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="474.6719"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="196.5" y="482.0908">cliente: Cliente</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="488.5078"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="196.5" y="495.9268">comidas: ArrayList &lt;Comida&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="502.3438"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="196.5" y="509.7627">bebidas: ArrayList &lt;Bebida&gt;</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="187.5" y="516.1797"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="196.5" y="523.5986">postres: ArrayList &lt;Postre&gt;</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="180.5" x2="511.5" y1="530.0156" y2="530.0156"/><ellipse cx="190.5" cy="541.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="40" x="196.5" y="545.4346">Pedido()</text><ellipse cx="190.5" cy="554.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="196.5" y="559.2705">Pedido(cliente: Cliente)</text><ellipse cx="190.5" cy="568.6875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="168" x="196.5" y="573.1064">getComidas() : ArrayList &lt;Comida&gt;</text><ellipse cx="190.5" cy="582.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="196.5" y="586.9424">getBebidas() : ArrayList &lt;Bebida&gt;</text><ellipse cx="190.5" cy="596.3594" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="196.5" y="600.7783">getPostres() : ArrayList &lt;Postre&gt;</text><ellipse cx="190.5" cy="610.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="198" x="196.5" y="614.6143">asignarRepartidor(int: idRepartidor) : void</text><ellipse cx="190.5" cy="624.0313" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="310" x="196.5" y="628.4502">agregarPlatillo(comida : Comida, bebida : Bebida, postre : Postre)</text><!--MD5=[602fc8348c2788192cded795ce4b2636]
+class IReceta--><rect codeLine="57" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="125.0156" id="IReceta" style="stroke:#1B1B1B;stroke-width:1.5;" width="230" x="621" y="117.5"/><ellipse cx="710.5" cy="130.5" fill="#B4A7E5" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M712.8438,134.5 L708.1563,134.5 L708.1563,133.0781 L709.4688,133.0781 L709.4688,127.9219 L708.1563,127.9219 L708.1563,126.5 L712.8438,126.5 L712.8438,127.9219 L711.5313,127.9219 L711.5313,133.0781 L712.8438,133.0781 L712.8438,134.5 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="44" x="726.5" y="134.8748">IReceta</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="622" x2="850" y1="143.5" y2="143.5"/><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="622" x2="850" y1="151.5" y2="151.5"/><ellipse cx="632" cy="162.5" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="638" y="166.9189">setNombre(nombre : String) : void</text><ellipse cx="632" cy="176.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="142" x="638" y="180.7549">setPrecio(precio : float) : void</text><ellipse cx="632" cy="190.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="638" y="194.5908">setIngredientes(ingredientes : String) : void</text><ellipse cx="632" cy="204.0078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="638" y="208.4268">getNombre() : String</text><ellipse cx="632" cy="217.8438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="638" y="222.2627">getPrecio() : String</text><ellipse cx="632" cy="231.6797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="638" y="236.0986">getIngredientes() : String</text><!--MD5=[499270d29bbdba8d04de2a857c850c15]
+class Comida--><rect codeLine="66" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="83.5078" id="Comida" style="stroke:#1B1B1B;stroke-width:1.5;" width="119" x="547.5" y="482"/><ellipse cx="581.55" cy="495" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M582.1906,499.1563 Q581.3,499.1563 580.5422,498.8906 Q579.7844,498.625 579.2375,498.1094 Q578.7063,497.5938 578.4016,496.8125 Q578.0969,496.0313 578.0969,495.0156 Q578.0969,494.0625 578.3859,493.2891 Q578.675,492.5156 579.2219,491.9531 Q579.7375,491.4219 580.5109,491.1328 Q581.2844,490.8438 582.1906,490.8438 Q582.6906,490.8438 583.0969,490.8984 Q583.5031,490.9531 583.8469,491.0469 Q584.2063,491.1563 584.5031,491.2813 Q584.8,491.4063 585.0188,491.5156 L585.0188,493.4531 L584.7844,493.4531 Q584.6281,493.3281 584.4016,493.1484 Q584.175,492.9688 583.8781,492.7969 Q583.5813,492.625 583.2375,492.5078 Q582.8938,492.3906 582.5031,492.3906 Q582.0656,492.3906 581.675,492.5234 Q581.2844,492.6563 580.9563,492.9844 Q580.6438,493.2813 580.4484,493.7891 Q580.2531,494.2969 580.2531,495.0156 Q580.2531,495.7656 580.4641,496.2734 Q580.675,496.7813 580.9875,497.0625 Q581.3156,497.3594 581.7219,497.4844 Q582.1281,497.6094 582.5188,497.6094 Q582.8938,497.6094 583.2609,497.5 Q583.6281,497.3906 583.9406,497.1875 Q584.2063,497.0469 584.4328,496.8672 Q584.6594,496.6875 584.8,496.5625 L585.0188,496.5625 L585.0188,498.4688 Q584.7219,498.6094 584.4484,498.7266 Q584.175,498.8438 583.8625,498.9219 Q583.4719,499.0313 583.1281,499.0938 Q582.7844,499.1563 582.1906,499.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="44" x="597.45" y="499.3748">Comida</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="548.5" x2="665.5" y1="508" y2="508"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="555.5" y="516"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="564.5" y="523.4189">nombre : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="555.5" y="529.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="564.5" y="537.2549">precio : float</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="555.5" y="543.6719"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="564.5" y="551.0908">ingredientes : String</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="548.5" x2="665.5" y1="557.5078" y2="557.5078"/><!--MD5=[033c40fe9f6705bb01208a8259264755]
+class Bebida--><rect codeLine="72" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="83.5078" id="Bebida" style="stroke:#1B1B1B;stroke-width:1.5;" width="119" x="701.5" y="482"/><ellipse cx="738" cy="495" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M738.6406,499.1563 Q737.75,499.1563 736.9922,498.8906 Q736.2344,498.625 735.6875,498.1094 Q735.1563,497.5938 734.8516,496.8125 Q734.5469,496.0313 734.5469,495.0156 Q734.5469,494.0625 734.8359,493.2891 Q735.125,492.5156 735.6719,491.9531 Q736.1875,491.4219 736.9609,491.1328 Q737.7344,490.8438 738.6406,490.8438 Q739.1406,490.8438 739.5469,490.8984 Q739.9531,490.9531 740.2969,491.0469 Q740.6563,491.1563 740.9531,491.2813 Q741.25,491.4063 741.4688,491.5156 L741.4688,493.4531 L741.2344,493.4531 Q741.0781,493.3281 740.8516,493.1484 Q740.625,492.9688 740.3281,492.7969 Q740.0313,492.625 739.6875,492.5078 Q739.3438,492.3906 738.9531,492.3906 Q738.5156,492.3906 738.125,492.5234 Q737.7344,492.6563 737.4063,492.9844 Q737.0938,493.2813 736.8984,493.7891 Q736.7031,494.2969 736.7031,495.0156 Q736.7031,495.7656 736.9141,496.2734 Q737.125,496.7813 737.4375,497.0625 Q737.7656,497.3594 738.1719,497.4844 Q738.5781,497.6094 738.9688,497.6094 Q739.3438,497.6094 739.7109,497.5 Q740.0781,497.3906 740.3906,497.1875 Q740.6563,497.0469 740.8828,496.8672 Q741.1094,496.6875 741.25,496.5625 L741.4688,496.5625 L741.4688,498.4688 Q741.1719,498.6094 740.8984,498.7266 Q740.625,498.8438 740.3125,498.9219 Q739.9219,499.0313 739.5781,499.0938 Q739.2344,499.1563 738.6406,499.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="39" x="754" y="499.3748">Bebida</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="702.5" x2="819.5" y1="508" y2="508"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="709.5" y="516"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="718.5" y="523.4189">nombre : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="709.5" y="529.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="718.5" y="537.2549">precio : float</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="709.5" y="543.6719"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="718.5" y="551.0908">ingredientes : String</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="702.5" x2="819.5" y1="557.5078" y2="557.5078"/><!--MD5=[7d093f595bee3bb8edbad188a525106e]
+class Postre--><rect codeLine="78" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="83.5078" id="Postre" style="stroke:#1B1B1B;stroke-width:1.5;" width="119" x="855.5" y="482"/><ellipse cx="893.5" cy="495" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M894.1406,499.1563 Q893.25,499.1563 892.4922,498.8906 Q891.7344,498.625 891.1875,498.1094 Q890.6563,497.5938 890.3516,496.8125 Q890.0469,496.0313 890.0469,495.0156 Q890.0469,494.0625 890.3359,493.2891 Q890.625,492.5156 891.1719,491.9531 Q891.6875,491.4219 892.4609,491.1328 Q893.2344,490.8438 894.1406,490.8438 Q894.6406,490.8438 895.0469,490.8984 Q895.4531,490.9531 895.7969,491.0469 Q896.1563,491.1563 896.4531,491.2813 Q896.75,491.4063 896.9688,491.5156 L896.9688,493.4531 L896.7344,493.4531 Q896.5781,493.3281 896.3516,493.1484 Q896.125,492.9688 895.8281,492.7969 Q895.5313,492.625 895.1875,492.5078 Q894.8438,492.3906 894.4531,492.3906 Q894.0156,492.3906 893.625,492.5234 Q893.2344,492.6563 892.9063,492.9844 Q892.5938,493.2813 892.3984,493.7891 Q892.2031,494.2969 892.2031,495.0156 Q892.2031,495.7656 892.4141,496.2734 Q892.625,496.7813 892.9375,497.0625 Q893.2656,497.3594 893.6719,497.4844 Q894.0781,497.6094 894.4688,497.6094 Q894.8438,497.6094 895.2109,497.5 Q895.5781,497.3906 895.8906,497.1875 Q896.1563,497.0469 896.3828,496.8672 Q896.6094,496.6875 896.75,496.5625 L896.9688,496.5625 L896.9688,498.4688 Q896.6719,498.6094 896.3984,498.7266 Q896.125,498.8438 895.8125,498.9219 Q895.4219,499.0313 895.0781,499.0938 Q894.7344,499.1563 894.1406,499.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="36" x="909.5" y="499.3748">Postre</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="856.5" x2="973.5" y1="508" y2="508"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="863.5" y="516"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="872.5" y="523.4189">nombre : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="863.5" y="529.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="872.5" y="537.2549">precio : float</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="863.5" y="543.6719"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="96" x="872.5" y="551.0908">ingredientes : String</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="856.5" x2="973.5" y1="557.5078" y2="557.5078"/><!--MD5=[8f63dadf5c643e74a34e53c8f0a15d23]
+class Persona--><rect codeLine="84" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="180.3594" id="Persona" style="stroke:#1B1B1B;stroke-width:1.5;" width="341" x="180.5" y="695"/><ellipse cx="324.5" cy="708" fill="#A9DCDF" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M328.4063,711.5 L326.2813,711.5 L325.7188,709.8906 L322.7656,709.8906 L322.2031,711.5 L320.125,711.5 L323.0781,703.5 L325.4531,703.5 L328.4063,711.5 Z M325.2188,708.4219 L324.25,705.5469 L323.2656,708.4219 L325.2188,708.4219 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="46" x="340.5" y="712.3748">Persona</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="181.5" x2="520.5" y1="721" y2="721"/><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="181.5" x2="520.5" y1="729" y2="729"/><ellipse cx="191.5" cy="740" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="197.5" y="744.4189">Persona()</text><ellipse cx="191.5" cy="753.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="318" x="197.5" y="758.2549">Persona(nombre: String, apellido : String, edad : int, genero : char)</text><ellipse cx="191.5" cy="767.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="162" x="197.5" y="772.0908">setNombre(nombre : String) : void</text><ellipse cx="191.5" cy="781.5078" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="156" x="197.5" y="785.9268">setApellido(apellido : float) : void</text><ellipse cx="191.5" cy="795.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="197.5" y="799.7627">setEdad(edad : String) : void</text><ellipse cx="191.5" cy="809.1797" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="197.5" y="813.5986">setGenero(genero : char) : void</text><ellipse cx="191.5" cy="823.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="197.5" y="827.4346">getNombre() : String</text><ellipse cx="191.5" cy="836.8516" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="197.5" y="841.2705">getApellido() : String</text><ellipse cx="191.5" cy="850.6875" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="197.5" y="855.1064">getEdad() : String</text><ellipse cx="191.5" cy="864.5234" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="90" x="197.5" y="868.9424">getGenero() : char</text><!--MD5=[20a748d5ee336a9a91751b0a3d4f0beb]
+class Cliente--><rect codeLine="97" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="69.6719" id="Cliente" style="stroke:#1B1B1B;stroke-width:1.5;" width="121" x="556.5" y="750"/><ellipse cx="593.5" cy="763" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M594.1406,767.1563 Q593.25,767.1563 592.4922,766.8906 Q591.7344,766.625 591.1875,766.1094 Q590.6563,765.5938 590.3516,764.8125 Q590.0469,764.0313 590.0469,763.0156 Q590.0469,762.0625 590.3359,761.2891 Q590.625,760.5156 591.1719,759.9531 Q591.6875,759.4219 592.4609,759.1328 Q593.2344,758.8438 594.1406,758.8438 Q594.6406,758.8438 595.0469,758.8984 Q595.4531,758.9531 595.7969,759.0469 Q596.1563,759.1563 596.4531,759.2813 Q596.75,759.4063 596.9688,759.5156 L596.9688,761.4531 L596.7344,761.4531 Q596.5781,761.3281 596.3516,761.1484 Q596.125,760.9688 595.8281,760.7969 Q595.5313,760.625 595.1875,760.5078 Q594.8438,760.3906 594.4531,760.3906 Q594.0156,760.3906 593.625,760.5234 Q593.2344,760.6563 592.9063,760.9844 Q592.5938,761.2813 592.3984,761.7891 Q592.2031,762.2969 592.2031,763.0156 Q592.2031,763.7656 592.4141,764.2734 Q592.625,764.7813 592.9375,765.0625 Q593.2656,765.3594 593.6719,765.4844 Q594.0781,765.6094 594.4688,765.6094 Q594.8438,765.6094 595.2109,765.5 Q595.5781,765.3906 595.8906,765.1875 Q596.1563,765.0469 596.3828,764.8672 Q596.6094,764.6875 596.75,764.5625 L596.9688,764.5625 L596.9688,766.4688 Q596.6719,766.6094 596.3984,766.7266 Q596.125,766.8438 595.8125,766.9219 Q595.4219,767.0313 595.0781,767.0938 Q594.7344,767.1563 594.1406,767.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="40" x="609.5" y="767.3748">Cliente</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="557.5" x2="676.5" y1="776" y2="776"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="564.5" y="784"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="81" x="573.5" y="791.4189">direccion : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="564.5" y="797.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="573.5" y="805.2549">numeroTelefono : int</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="557.5" x2="676.5" y1="811.6719" y2="811.6719"/><!--MD5=[d025ed685a3424d80b9405aa5ae2ddba]
+class Repartidor--><rect codeLine="102" fill="#2E2E2E" filter="url(#f10u7pj4itjxs1)" height="69.6719" id="Repartidor" style="stroke:#1B1B1B;stroke-width:1.5;" width="138" x="7" y="750"/><ellipse cx="42.5" cy="763" fill="#1A66C2" rx="8" ry="8" style="stroke:#1B1B1B;stroke-width:1.0;"/><path d="M43.1406,767.1563 Q42.25,767.1563 41.4922,766.8906 Q40.7344,766.625 40.1875,766.1094 Q39.6563,765.5938 39.3516,764.8125 Q39.0469,764.0313 39.0469,763.0156 Q39.0469,762.0625 39.3359,761.2891 Q39.625,760.5156 40.1719,759.9531 Q40.6875,759.4219 41.4609,759.1328 Q42.2344,758.8438 43.1406,758.8438 Q43.6406,758.8438 44.0469,758.8984 Q44.4531,758.9531 44.7969,759.0469 Q45.1563,759.1563 45.4531,759.2813 Q45.75,759.4063 45.9688,759.5156 L45.9688,761.4531 L45.7344,761.4531 Q45.5781,761.3281 45.3516,761.1484 Q45.125,760.9688 44.8281,760.7969 Q44.5313,760.625 44.1875,760.5078 Q43.8438,760.3906 43.4531,760.3906 Q43.0156,760.3906 42.625,760.5234 Q42.2344,760.6563 41.9063,760.9844 Q41.5938,761.2813 41.3984,761.7891 Q41.2031,762.2969 41.2031,763.0156 Q41.2031,763.7656 41.4141,764.2734 Q41.625,764.7813 41.9375,765.0625 Q42.2656,765.3594 42.6719,765.4844 Q43.0781,765.6094 43.4688,765.6094 Q43.8438,765.6094 44.2109,765.5 Q44.5781,765.3906 44.8906,765.1875 Q45.1563,765.0469 45.3828,764.8672 Q45.6094,764.6875 45.75,764.5625 L45.9688,764.5625 L45.9688,766.4688 Q45.6719,766.6094 45.3984,766.7266 Q45.125,766.8438 44.8125,766.9219 Q44.4219,767.0313 44.0781,767.0938 Q43.7344,767.1563 43.1406,767.1563 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="60" x="58.5" y="767.3748">Repartidor</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="8" x2="144" y1="776" y2="776"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="784"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="24" y="791.4189">noRepartidor : String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="15" y="797.8359"/><text fill="#AAAAAA" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="24" y="805.2549">medioTranspore : String</text><line style="stroke:#1B1B1B;stroke-width:1.5;" x1="8" x2="144" y1="811.6719" y2="811.6719"/><!--MD5=[f6363b382a30d0da343356c1175a23bd]
+reverse link Persona to Cliente--><path codeLine="107" d="M541.69,785 C546.56,785 551.43,785 556.3,785 " fill="none" id="Persona-backto-Cliente" style="stroke:#FFFFFF;stroke-width:1.0;"/><polygon fill="none" points="541.67,792,521.67,785,541.67,778,541.67,792" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[f44fe1245156e2049eb195053590e8ce]
+link Repartidor to Persona--><path codeLine="108" d="M145.02,785 C150.09,785 155.16,785 160.23,785 " fill="none" id="Repartidor-to-Persona" style="stroke:#FFFFFF;stroke-width:1.0;"/><polygon fill="none" points="160.42,778,180.42,785,160.42,792,160.42,778" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[de6e20c35860d7f67e7ded37f2cb9497]
+reverse link Restaurante to Pedido--><path codeLine="110" d="M368.45,366.3 C366.19,382.11 363.95,397.75 361.81,412.68 " fill="none" id="Restaurante-backto-Pedido" style="stroke:#FFFFFF;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="370.36,353,365.55,358.3725,368.6593,364.8789,373.4692,359.5063,370.36,353" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[7841c8d9b09ee26dd705a0216d59586d]
+link Restaurante to IReceta--><path codeLine="111" d="M562.17,180 C575.02,180 587.87,180 600.72,180 " fill="none" id="Restaurante-to-IReceta" style="stroke:#FFFFFF;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="600.91,173,620.91,180,600.91,187,600.91,173" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[c791660f35ca22257d0ddcd44d200805]
+reverse link IReceta to Comida--><path codeLine="113" d="M705.57,261.69 C679.49,330.81 643.01,427.53 622.53,481.83 " fill="none" id="IReceta-backto-Comida" style="stroke:#FFFFFF;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="699.18,258.78,712.79,242.54,712.28,263.72,699.18,258.78" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[eee44c4af35315d5a5e07aec30b7ef3a]
+reverse link IReceta to Bebida--><path codeLine="114" d="M741.96,262.58 C747.01,331.63 754.04,427.77 757.99,481.83 " fill="none" id="IReceta-backto-Bebida" style="stroke:#FFFFFF;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="734.98,262.99,740.5,242.54,748.94,261.97,734.98,262.99" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[50b39d3d378c8d4a219b8736a38d46b2]
+reverse link IReceta to Postre--><path codeLine="115" d="M777.54,260.36 C813.76,329.56 864.85,427.18 893.45,481.83 " fill="none" id="IReceta-backto-Postre" style="stroke:#FFFFFF;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="771.28,263.5,768.21,242.54,783.68,257.01,771.28,263.5" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[692eb5cf8538c4d2bd348cf14e989488]
+reverse link Pedido to Cliente--><path codeLine="117" d="M485.67,644.17 C503.95,660.88 522.16,678.12 539,695 C556.27,712.31 574.33,732.76 588.73,749.69 " fill="none" id="Pedido-backto-Cliente" style="stroke:#FFFFFF;stroke-width:1.0;"/><polygon fill="#777777" points="475.81,635.22,477.5688,642.2133,484.7006,643.2796,482.9418,636.2863,475.81,635.22" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[44f1941c1adc69c62ca82b4ec3fff349]
+reverse link Pedido to Repartidor--><path codeLine="118" d="M215.73,644.58 C197.88,661.37 179.9,678.53 163,695 C144.74,712.8 124.83,733.1 108.67,749.81 " fill="none" id="Pedido-backto-Repartidor" style="stroke:#FFFFFF;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="225.62,635.29,218.5084,636.4837,216.875,643.5074,223.9866,642.3137,225.62,635.29" style="stroke:#FFFFFF;stroke-width:1.0;"/><!--MD5=[2fbb816bd510d4e0aa280bf5fd1fd01a]
+@startuml
+
+!define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+
+note as N1 #OrangeRed
+Ávila Sánchez Aldrich Jonathan
+González Oloarte Diego Enrique
+Mora Campos Ricardo Uriel 
+Velázquez Hernández Aldo
+end note
+
+class Restaurante {
+    - nombre: String
+    - ubicacion: String 
+    - telefono: String 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+    - pedido: ArrayList <Pedido> 
+    + repartidores ArrayList <Repartidor> 
+
+    + Restaurante()
+    + Restaurante(nombre : String, ubicacion : String, telefono : String) 
+    + setNombre(nombre : String) : void
+    + setUbicacion(ubicacion : String) : void
+    + setTelefono(telefono : String) : void
+    + getNombre() : String
+    + getUbicacion() : String
+    + getTelefono() : String
+    + getRepartidores() : ArrayList <Repartidor>
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + agregaRepartidor()
+    + agregarPlatillo()
+
+}
+
+class Pedido {
+    - Repartidor: Repartido
+    - idRepartidor: int 
+    - cliente: Cliente 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+
+    + Pedido()
+    + Pedido(cliente: Cliente)
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + asignarRepartidor(int: idRepartidor) : void
+    + agregarPlatillo(comida : Comida, bebida : Bebida, postre : Postre)
+
+}
+
+interface IReceta {
+    + setNombre(nombre : String) : void
+    + setPrecio(precio : float) : void
+    + setIngredientes(ingredientes : String) : void
+    + getNombre() : String
+    + getPrecio() : String
+    + getIngredientes() : String
+}
+
+class Comida {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+class Bebida {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+class Postre {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+Abstract Persona {
+    + Persona()
+    + Persona(nombre: String, apellido : String, edad : int, genero : char)
+    + setNombre(nombre : String) : void
+    + setApellido(apellido : float) : void
+    + setEdad(edad : String) : void
+    + setGenero(genero : char) : void
+    + getNombre() : String
+    + getApellido() : String
+    + getEdad() : String
+    + getGenero() : char
+}
+
+class Cliente {
+    - direccion : String 
+    - numeroTelefono : int 
+}
+
+class Repartidor {
+    - noRepartidor : String 
+    - medioTranspore : String 
+}
+
+Persona <|-r- Cliente
+Persona <|-l- Repartidor
+
+Restaurante *- - Pedido
+Restaurante -right.|> IReceta
+
+IReceta <|-. Comida
+IReceta <|-. Bebida
+IReceta <|-. Postre
+
+Pedido o- - Cliente
+Pedido *- - Repartidor
+
+@enduml
+
+@startuml
+
+
+
+
+skinparam backgroundColor 777
+skinparam stereotypeCBackgroundColor 1a66c2
+
+
+
+
+
+
+
+
+
+skinparam backgroundColor 777
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  attributeFontColor aaa
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor 575757
+  borderColor 767676
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  lifeLineBorderColor 1a66c2
+  lifeLineBackgroundColor 575757
+}
+
+skinparam boundary {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+  startColor 1a66c2
+  endColor 002642
+}
+
+
+skinparam object {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 1a66c2
+  borderColor 002642
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+note as N1 #OrangeRed
+Ávila Sánchez Aldrich Jonathan
+González Oloarte Diego Enrique
+Mora Campos Ricardo Uriel 
+Velázquez Hernández Aldo
+end note
+
+class Restaurante {
+    - nombre: String
+    - ubicacion: String 
+    - telefono: String 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+    - pedido: ArrayList <Pedido> 
+    + repartidores ArrayList <Repartidor> 
+
+    + Restaurante()
+    + Restaurante(nombre : String, ubicacion : String, telefono : String) 
+    + setNombre(nombre : String) : void
+    + setUbicacion(ubicacion : String) : void
+    + setTelefono(telefono : String) : void
+    + getNombre() : String
+    + getUbicacion() : String
+    + getTelefono() : String
+    + getRepartidores() : ArrayList <Repartidor>
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + agregaRepartidor()
+    + agregarPlatillo()
+
+}
+
+class Pedido {
+    - Repartidor: Repartido
+    - idRepartidor: int 
+    - cliente: Cliente 
+    - comidas: ArrayList <Comida> 
+    - bebidas: ArrayList <Bebida> 
+    - postres: ArrayList <Postre> 
+
+    + Pedido()
+    + Pedido(cliente: Cliente)
+    + getComidas() : ArrayList <Comida>
+    + getBebidas() : ArrayList <Bebida>
+    + getPostres() : ArrayList <Postre>
+    + asignarRepartidor(int: idRepartidor) : void
+    + agregarPlatillo(comida : Comida, bebida : Bebida, postre : Postre)
+
+}
+
+interface IReceta {
+    + setNombre(nombre : String) : void
+    + setPrecio(precio : float) : void
+    + setIngredientes(ingredientes : String) : void
+    + getNombre() : String
+    + getPrecio() : String
+    + getIngredientes() : String
+}
+
+class Comida {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+class Bebida {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+class Postre {
+    - nombre : String 
+    - precio : float 
+    - ingredientes : String 
+}
+
+Abstract Persona {
+    + Persona()
+    + Persona(nombre: String, apellido : String, edad : int, genero : char)
+    + setNombre(nombre : String) : void
+    + setApellido(apellido : float) : void
+    + setEdad(edad : String) : void
+    + setGenero(genero : char) : void
+    + getNombre() : String
+    + getApellido() : String
+    + getEdad() : String
+    + getGenero() : char
+}
+
+class Cliente {
+    - direccion : String 
+    - numeroTelefono : int 
+}
+
+class Repartidor {
+    - noRepartidor : String 
+    - medioTranspore : String 
+}
+
+Persona <|-r- Cliente
+Persona <|-l- Repartidor
+
+Restaurante *- - Pedido
+Restaurante -right.|> IReceta
+
+IReceta <|-. Comida
+IReceta <|-. Bebida
+IReceta <|-. Postre
+
+Pedido o- - Cliente
+Pedido *- - Repartidor
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 04:25:05 CST 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Default Encoding: Cp1252
+Language: es
+Country: MX
+--></g></svg>
