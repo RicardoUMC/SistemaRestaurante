@@ -68,6 +68,9 @@ public class Modelo {
     public void registrarDatosRestaurante(String nombre, String ubicacion, String telefono){
         miRestaurante = new Restaurante(nombre, ubicacion, telefono);
     }
-
+    //Método que invoca al pedir los datos del cliente
+    public void guardarCliente(Cliente r){
+        miRestaurante.agregarCliente(r);
+    }
 }
 
