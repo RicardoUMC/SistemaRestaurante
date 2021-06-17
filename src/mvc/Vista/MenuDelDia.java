@@ -7,7 +7,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.GridLayout;
+import java.awt.GridBagLayout;
 import java.awt.BorderLayout;
+import java.awt.GridBagConstraints;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -41,30 +43,41 @@ public class MenuDelDia extends JFrame{
         modeloPostres.addColumn("Nombre");
         modeloPostres.addColumn("Precio ($)");  
 
-        panelNorte.setLayout(new GridLayout(2,1));
-        panelTitulos.setLayout(new GridLayout(1, 3));
+        panelNorte.setLayout(new GridBagLayout());
+        panelTitulos.setLayout(new GridLayout(1,3));
 
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         tituloApp = new JLabel("<html><span style='color: teal;'>MENÚ DEL DÍA</span></html>");
     }
     
     public void mostrar (String[][] comidas, String[][] bebidas, String[][] postres){
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.gridwidth = 1;
+        c.weightx = 1;
+        c.weighty = 1;
         
         setTitle("Menú del día");
         
         //añadimos títlo
-        tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
-        panelNorte.add(tituloApp);
+        c.gridx = 1;
+        c.gridy = 0;
+        panelNorte.add(tituloApp, c);
 
         //Añadimos títulos de tablas
         JLabel titulo = new JLabel();
         titulo = new JLabel("<html><span style='color: teal;'>Comida</span></html>");
-        panelTitulos.add(titulo);
+        c.gridx = 0;
+        c.gridy = 1;
+        panelNorte.add(titulo, c);
         titulo = new JLabel("<html><span style='color: teal;'>Bebidas</span></html>");
-        panelTitulos.add(titulo);
+        c.gridx = 1;
+        c.gridy = 1;
+        panelNorte.add(titulo, c);
         titulo = new JLabel("<html><span style='color: teal;'>Postres</span></html>");
-        panelTitulos.add(titulo);
-        panelNorte.add(panelTitulos, BorderLayout.SOUTH);
+        c.gridx = 2;
+        c.gridy = 1;
+        panelNorte.add(titulo, c);
 
         //Añadimos sección de comida
         //Creamos tabla comida

@@ -56,7 +56,7 @@ public class Controlador{
                         JOptionPane.showMessageDialog(null, "Seleccione comida, bebida, repartidor y método de pago, por favor");  
                     }
                     
-                    JOptionPane.showMessageDialog(null, "Se ha registrado exitosamente su pedido, \nComida: " + comida + "\nBebida: " + bebida + "\nPostre: " + postre + "\nRepartidor: " + nombreRepartidor + "\n\nCliente: " + nombreCliente + "\nTotal a pagar: " + total + "\nMétodo de pago: " + metodoPago);  
+                    JOptionPane.showMessageDialog(null, "Se ha registrado exitosamente su pedido. \nComida: " + comida + "\nBebida: " + bebida + "\nPostre: " + postre + "\nRepartidor: " + nombreRepartidor + "\n\nCliente: " + nombreCliente + "\nTotal a pagar: " + total + "\nMétodo de pago: " + metodoPago);  
                     
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Seleccione todos los campos");  

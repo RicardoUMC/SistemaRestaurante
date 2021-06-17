@@ -95,7 +95,7 @@ public class CrearPedido extends JFrame{
         c.gridx = 2;
         c.gridy = 0;
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
-        panelNorte.add( btnAceptar, c);
+        panelNorte.add(btnAceptar, c);
 
         //Añadimos títulos de tablas
         JLabel titulo = new JLabel();
@@ -145,8 +145,6 @@ public class CrearPedido extends JFrame{
         add(new JScrollPane(tablaBebidas), BorderLayout.CENTER);
         add(new JScrollPane(tablaPostres), BorderLayout.EAST);
         add(new JScrollPane(tablaRepartidor), BorderLayout.SOUTH);
-        
-
 
         setSize(800, 500);
 		setLocation(500, 500);
