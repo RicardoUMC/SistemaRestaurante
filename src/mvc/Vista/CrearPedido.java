@@ -15,44 +15,44 @@ public class CrearPedido extends JFrame{
 
     
 
-    String [] columnas = {"Comidas","cantidad"};
-    String [] columnas2 = {"No. Repartidor","Veiculo"};
+    //String [] columnas = {"Comidas","cantidad"};
+    //String [] columnas2 = {"No. Repartidor","Veiculo"};
     
-    public JTable tablaRepartidor = new JTable();
+    
     public JTable tablaComidas = new JTable();
     public JTable tablaBebidas = new JTable();
     public JTable tablaPostres = new JTable();
-
+    public JTable tablaRepartidor = new JTable();
     
-    public DefaultTableModel modeloRepartidor = (DefaultTableModel) tablaRepartidor.getModel();
+ 
     public DefaultTableModel modeloComidas = (DefaultTableModel) tablaComidas.getModel();
     public DefaultTableModel modeloBebidas = (DefaultTableModel) tablaBebidas.getModel();
     public DefaultTableModel modeloPostres = (DefaultTableModel) tablaPostres.getModel();
-
+    public DefaultTableModel modeloRepartidor = (DefaultTableModel) tablaRepartidor.getModel();
     JPanel panelNorte = new JPanel();
     JPanel panelIzquierdo = new JPanel();
     JPanel panelCentro = new JPanel();
-    JPanel panelCentro2 = new JPanel();
     JPanel panelDerecho = new JPanel();
-    
+    JPanel panelInferior = new JPanel();
+
     JLabel tituloApp = new JLabel();
 
     public CrearPedido() {
         //Se definen los títulos para los headers de la tabla  
         modeloComidas.addColumn("Nombre");
-        modeloComidas.addColumn("Cantidad");  
+        modeloComidas.addColumn("Precio");  
         modeloBebidas.addColumn("Nombre");
-        modeloBebidas.addColumn("Cantidad"); 
+        modeloBebidas.addColumn("Precio"); 
         modeloPostres.addColumn("Nombre");
-        modeloPostres.addColumn("Cantidad"); 
+        modeloPostres.addColumn("Precio"); 
+        modeloRepartidor.addColumn("Nombre");
         modeloRepartidor.addColumn("No. Repartidor");
-        modeloRepartidor.addColumn("Veiculo");
 
-        panelCentro.setLayout(new GridBagLayout());
-        panelIzquierdo.setLayout(new GridBagLayout());
         panelNorte.setLayout(new FlowLayout());
-        panelCentro2.setLayout(new GridBagLayout());
-        panelDerecho.setLayout(new FlowLayout());
+        panelIzquierdo.setLayout(new GridBagLayout());
+        panelCentro.setLayout(new GridBagLayout());
+        panelDerecho.setLayout(new GridBagLayout());
+        panelInferior.setLayout(new GridBagLayout());
 
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         tituloApp = new JLabel("<html><span style='color: teal;'>Pedidos</span></html>");
@@ -122,20 +122,20 @@ public class CrearPedido extends JFrame{
         titulo = new JLabel("<html><span style='color: teal;'>Pedidos</span></html>");
         c.gridx = 0;
         c.gridy = 0;
-        panelIzquierdo.add(titulo, c);
+        panelInferior.add(titulo, c);
         c.gridx = 0;
         c.gridy = 2;   
-        panelIzquierdo.add(new JScrollPane(tablaRepartidor), c);
+        panelInferior.add(new JScrollPane(tablaRepartidor), c);
 
 
 
         //Añadimos los paneles a la ventana
         getContentPane().setLayout(new BorderLayout());
         add(panelNorte, BorderLayout.NORTH);
-        add(panelIzquierdo, BorderLayout.LINE_START);
+        add(panelIzquierdo, BorderLayout.WEST);
         add(panelCentro, BorderLayout.CENTER);
-        add(panelCentro2, BorderLayout.CENTER);
-        add(panelDerecho, BorderLayout.LINE_END);
+        add(panelDerecho, BorderLayout.EAST);
+        add(panelInferior, BorderLayout.SOUTH);
 
         setSize(800, 500);
 		setLocation(500, 500);
