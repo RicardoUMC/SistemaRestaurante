@@ -66,7 +66,24 @@ public class Controlador{
                 if (existeRestaurante()){
                     
                     if (modelo.platillos()) {
-                        //registra cliente
+                        //------------LO QUE AGREGO------------//
+                        //Si no hay repartidores no habrá quien entregue el pedido, por eso lo validamos primero
+                        try {
+                            String repartidores [][] = obtenerRepartidores();
+                            
+                            String comidas [][] = obtenerComidas();
+                            String bebidas [][] = obtenerBebidas();
+                            String postres [][] = obtenerPostres();
+                                
+                            //Le pasamos esta información a la ventana que muestra el menú del día
+                            crearPedido.mostrar(comidas, bebidas, postres, repartidores);
+
+                        } catch (Exception a) {
+                            JOptionPane.showMessageDialog(null, "No tenemos repartidores disponibles para tu solicitud.");
+                            return;
+                        }
+                        
+                        //Se registra al primer cliente
                         if (modelo.miRestaurante.getCliente() == null){
                             ArrayList<Cliente> clientes = new ArrayList<Cliente>();
                             modelo.miRestaurante.setCliente(clientes);
@@ -91,14 +108,6 @@ public class Controlador{
                         } catch (NullPointerException nullPointer) {
                             JOptionPane.showMessageDialog(null, "No se pudo completar.");
                         }
-
-                        String comidas [][] = obtenerComidas();
-                        String bebidas [][] = obtenerBebidas();
-                        String postres [][] = obtenerPostres();
-                        String repartidores [][] = obtenerRepartidores();
-                        //Le pasamos esta información a la ventana que muestra el menú del día
-                        crearPedido.mostrar(comidas, bebidas, postres, repartidores);
-                        
                         return;
                     }
                     else {
