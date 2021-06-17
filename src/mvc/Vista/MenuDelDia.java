@@ -7,9 +7,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.GridLayout;
-import java.awt.event.WindowListener;
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -30,22 +28,21 @@ public class MenuDelDia extends JFrame{
     
     //Creamos 4 paneles
     JPanel panelNorte = new JPanel();
-    JPanel panelIzquierdo = new JPanel();
-    JPanel panelCentro = new JPanel();
-    JPanel panelDerecho = new JPanel();
+    JPanel panelTitulos = new JPanel();
     
     JLabel tituloApp = new JLabel();
 
     public MenuDelDia() {
         //Se definen los títulos para los headers de la tabla  
         modeloComidas.addColumn("Nombre");
-        modeloComidas.addColumn("Precio");  
+        modeloComidas.addColumn("Precio ($)");  
         modeloBebidas.addColumn("Nombre");
-        modeloBebidas.addColumn("Precio");  
+        modeloBebidas.addColumn("Precio ($)");  
         modeloPostres.addColumn("Nombre");
-        modeloPostres.addColumn("Precio");  
+        modeloPostres.addColumn("Precio ($)");  
 
-        panelNorte.setLayout(new FlowLayout());
+        panelNorte.setLayout(new GridLayout(2,1));
+        panelTitulos.setLayout(new GridLayout(1, 3));
 
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         tituloApp = new JLabel("<html><span style='color: teal;'>MENÚ DEL DÍA</span></html>");
@@ -55,47 +52,37 @@ public class MenuDelDia extends JFrame{
         
         setTitle("Menú del día");
         
-
-
         //añadimos títlo
-
         tituloApp.setFont(tituloApp.getFont().deriveFont(25.0f));
         panelNorte.add(tituloApp);
 
-        
+        //Añadimos títulos de tablas
         JLabel titulo = new JLabel();
+        titulo = new JLabel("<html><span style='color: teal;'>Comida</span></html>");
+        panelTitulos.add(titulo);
+        titulo = new JLabel("<html><span style='color: teal;'>Bebidas</span></html>");
+        panelTitulos.add(titulo);
+        titulo = new JLabel("<html><span style='color: teal;'>Postres</span></html>");
+        panelTitulos.add(titulo);
+        panelNorte.add(panelTitulos, BorderLayout.SOUTH);
 
         //Añadimos sección de comida
         //Creamos tabla comida
         modeloComidas = llenarTabla(modeloComidas, comidas);
         tablaComidas.setModel(modeloComidas); 
         modeloComidas.fireTableDataChanged();
-        titulo = new JLabel("<html><span style='color: teal;'>Comida</span></html>");
- 
-        tablaComidas.setFillsViewportHeight(true);
-        panelIzquierdo.add(new JScrollPane(tablaComidas));
-
         
         //Añadimos sección de Bebida
         //Creamos tabla Bebida
         modeloBebidas = llenarTabla(modeloBebidas, bebidas);
         tablaBebidas.setModel(modeloBebidas); 
         modeloBebidas.fireTableDataChanged();
-        titulo = new JLabel("<html><span style='color: teal;'>Bebidas</span></html>");
-  
-        tablaBebidas.setFillsViewportHeight(true);
-        panelCentro.add(new JScrollPane(tablaBebidas));
         
         //Añadimos sección de Postre
         //Creamos tabla Postre
         modeloPostres = llenarTabla(modeloPostres, postres);
         tablaPostres.setModel(modeloPostres); 
         modeloPostres.fireTableDataChanged();   
-        titulo = new JLabel("<html><span style='color: teal;'>Postres</span></html>");
-
-        tablaPostres.setFillsViewportHeight(true);
-        panelDerecho.add(new JScrollPane(tablaPostres));
-
 
         //Añadimos los paneles a la ventana
         getContentPane().setLayout(new BorderLayout());
@@ -132,7 +119,4 @@ public class MenuDelDia extends JFrame{
         }
         return modelo;       
     }
-
-
-
 }

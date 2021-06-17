@@ -32,7 +32,39 @@ public class Controlador{
         this.menuPrincipal.btnRegPlatilo.addActionListener(listenerMenu);
         this.menuPrincipal.btnRegRestaurante.addActionListener(listenerMenu);
         this.menuPrincipal.btnSalir.addActionListener(listenerMenu);
+        this.crearPedido.btnAceptar.addActionListener(listenerPedido);
     }
+
+    ActionListener listenerPedido = new ActionListener(){
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //Realizar pedido
+            if(crearPedido.btnAceptar == e.getSource()){
+                try {
+                    String comida = String.valueOf(crearPedido.modeloComidas.getValueAt(crearPedido.tablaComidas.getSelectedRow(),0));
+                    float precioComida = Float.parseFloat(String.valueOf(crearPedido.modeloComidas.getValueAt(crearPedido.tablaComidas.getSelectedRow(),1)));
+                    String bebida = String.valueOf(crearPedido.modeloBebidas.getValueAt(crearPedido.tablaBebidas.getSelectedRow(),0));
+                    float precioBebida = Float.parseFloat(String.valueOf(crearPedido.modeloBebidas.getValueAt(crearPedido.tablaBebidas.getSelectedRow(),1)));
+                    String postre = String.valueOf(crearPedido.modeloPostres.getValueAt(crearPedido.tablaPostres.getSelectedRow(),0));
+                    float precioPostre = Float.parseFloat(String.valueOf(crearPedido.modeloPostres.getValueAt(crearPedido.tablaPostres.getSelectedRow(),1)));
+                    String nombreRepartidor = String.valueOf(crearPedido.modeloRepartidor.getValueAt(crearPedido.tablaRepartidor.getSelectedRow(),0));
+                    String nombreCliente = crearPedido.nombreCliente;
+                    float total = precioComida + precioBebida + precioPostre;
+                    String metodoPago = crearPedido.listMetodos.getSelectedItem().toString();
+    
+                    if (comida == null || bebida == null || postre == null || comida == null){
+                        JOptionPane.showMessageDialog(null, "Seleccione comida, bebida, repartidor y método de pago, por favor");  
+                    }
+                    
+                    JOptionPane.showMessageDialog(null, "Se ha registrado exitosamente su pedido, \nComida: " + comida + "\nBebida: " + bebida + "\nPostre: " + postre + "\nRepartidor: " + nombreRepartidor + "\n\nCliente: " + nombreCliente + "\nTotal a pagar: " + total + "\nMétodo de pago: " + metodoPago);  
+                    
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Seleccione todos los campos");  
+                    //TODO: handle exception
+                }
+            }
+        }
+    };
 
     ActionListener listenerMenu = new ActionListener(){
         @Override
@@ -90,8 +122,10 @@ public class Controlador{
                         //Hacemos referencia al objeto que nos ayude a registrar el platillo en el ListArray
                         modelo.regCliente = new Cliente();
                         //Pedimos datos del Cliente
-                        modelo.regCliente.setNombre(validString(JOptionPane.showInputDialog(modelo.nomCli), modelo.nomCli));
-                        modelo.regCliente.setApellido(validString(JOptionPane.showInputDialog(modelo.apeCli), modelo.apeCli));
+                        String nombreCliente = validString(JOptionPane.showInputDialog(modelo.nomCli), modelo.nomCli); 
+                        modelo.regCliente.setNombre(nombreCliente);
+                        String apellidoCliente = validString(JOptionPane.showInputDialog(modelo.apeCli), modelo.apeCli); 
+                        modelo.regCliente.setApellido(apellidoCliente);
                         modelo.regCliente.setEdad(validInt(validString(JOptionPane.showInputDialog(modelo.EdCli), modelo.EdCli), modelo.EdCli));
                         //Se valida solamente F o M
                         String[] options = {"F", "M"};
@@ -112,7 +146,7 @@ public class Controlador{
                         postres = obtenerPostres();
                             
                         //Le pasamos esta información a la ventana que muestra el menú del día
-                        crearPedido.mostrar(comidas, bebidas, postres, repartidores);
+                        crearPedido.mostrar(comidas, bebidas, postres, repartidores, nombreCliente, apellidoCliente);
                         return;
                     }
                     else {
@@ -222,6 +256,8 @@ public class Controlador{
             }
         }
     };
+
+
 
     private String [][] obtenerComidas(){
         //Contamos las comidas que hay registradas
