@@ -93,6 +93,7 @@ public class Restaurante implements IReceta {
         this.repartidores = repartidores;
     }
 
+    //---------NO BORRAR---------//
     public ArrayList<Pedido> getPedido() {
         return pedido;
     }
@@ -100,5 +101,5 @@ public class Restaurante implements IReceta {
     public void setPedido(ArrayList<Pedido> pedido) {
         this.pedido = pedido;
     }
-
+    //---------NO BORRAR---------//
 }
